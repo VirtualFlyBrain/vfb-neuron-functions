@@ -93,7 +93,7 @@ DM5_lPN	DM5_lPN yeasty	olfactory					The BANC project		FBbt:00067367	adult anten
 DM6_adPN	DM6_adPN yeasty; negative covariance with odour valence	olfactory	yes	Lizbinski et al. 2025	https://www.biorxiv.org/content/10.1101/2025.11.08.687380v1		The BANC project; Yijie Yin		FBbt:00067360	adult antennal lobe projection neuron DM6 adPN	
 Dm13	Dm13 UV selective	visual	yes	Currier & Clandinin 2025	https://www.cell.com/cell/abstract/S0092-8674(25)00518-5		Yijie Yin		FBbt:00111274	distal medullary amacrine neuron Dm13	
 DM16	DM16 OFF responsive	visual	yes	Currier & Clandinin 2025	https://www.cell.com/cell/abstract/S0092-8674(25)00518-5		Yijie Yin		FBbt:00111277	distal medullary amacrine neuron Dm16	
-Dm8	Dm8 visual_chromatic; phototaxis; visual	visual		Gao et al. 2008; Schnaitmann et al. 2013; Li et al. 2021; Pagni et al. 2021			The BANC project				
+Dm8	Dm8 visual_chromatic; phototaxis; visual	visual		Gao et al. 2008; Schnaitmann et al. 2013; Li et al. 2021; Pagni et al. 2021			The BANC project		FBbt:00013774	distal medullary amacrine neuron Dm8a	
 Dm8a	Dm8a UV pooling	visual					Michael Reiser; Yijie Yin		FBbt:00013774	distal medullary amacrine neuron Dm8a	
 Dm8b	Dm8b UV pooling	visual					Michael Reiser; Yijie Yin		FBbt:00110069	distal medullary amacrine neuron Dm8b	
 Dm9	Dm9 Color opponent; UV selective	visual	yes	Heath et al 2020; Currier & Clandinin 2025	https://www.cell.com/cell/abstract/S0092-8674(25)00518-5		Michael Reiser; Yijie Yin; Alexander Bates		FBbt:00111271	distal medullary amacrine neuron Dm9	
