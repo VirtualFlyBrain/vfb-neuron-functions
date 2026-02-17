@@ -1,6 +1,6 @@
 cell_type	known_function	category	experimentally_tested	reference	link_to_paper	notes	contributor	also_known_as
 abd_SAG_IN_input	abd_SAG_IN_input oviposition   	reproduction				strong input to SAG	The BANC project	
-abdominal_terminalia_bristle	abdominal_terminalia_bristle oviposition, egg_laying	reproduction		Cury and Axel 2023		These **neurons provide tactile feedback during egg laying, modulating the progression from bending to burrowing to egg expulsion.​**	The BANC project	
+abdominal_terminalia_bristle	abdominal_terminalia_bristle oviposition, egg_laying	reproduction		Cury and Axel 2023		These **neurons provide tactile feedback during egg laying, modulating the progression from bending to burrowing to egg expulsion.**	The BANC project	
 additional LC neurons 	additional LC neurons			Klapoetke, et al. 2022	https://www.cell.com/neuron/abstract/S0896-6273(22)00178-7			
 aMe12	aMe12 visual_chromatic	visual		Kind et al 2021			The BANC project	
 aMe3	aMe3 input to clock neurons	circadian_rhythm		Reinhard et al 2024	https://www.nature.com/articles/s41467-024-54694-0		Judith Hoeller	
@@ -203,10 +203,10 @@ HRN_VP1d	HRN_VP1d hygrosensory	hygrosensory	yes	Enjin et al. 2016; Frank et al. 
 HRN_VP1l	HRN_VP1l hygrosensory	hygrosensory	yes	Enjin et al. 2016; Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982216302597; https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
 HRN_VP4	HRN_VP4 dry sensing	hygrosensory	yes	Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
 HRN_VP5	HRN_VP5 humid sensing	hygrosensory	yes	Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
-HSE	HSE Horizontal flow; visual_horizontal_widefieldmotion; visual			"			Michael Reiser; Yijie Yin; Alexander Bates	
+HSE	HSE Horizontal flow; visual_horizontal_widefieldmotion; visual						Michael Reiser; Yijie Yin; Alexander Bates	
 HSN	HSN Horizontal flow; visual_horizontal_widefieldmotion; visual			many paper, but all 50+ LPTCs predicted in (Arthur) Zhao, et al paper. 			Michael Reiser; Yijie Yin; Alexander Bates	
-HSS	HSS Horizontal flow; visual_horizontal_widefieldmotion; visual			"			Michael Reiser; Yijie Yin; Alexander Bates	
-HST	HST Horizontal flow	visual		"			Michael Reiser; Yijie Yin	
+HSS	HSS Horizontal flow; visual_horizontal_widefieldmotion; visual						Michael Reiser; Yijie Yin; Alexander Bates	
+HST	HST Horizontal flow	visual					Michael Reiser; Yijie Yin	
 il3LN6	il3LN6 increase left-right contrast in DA1_lPN	olfactory		Taisz et al. 2023	https://www.cell.com/cell/fulltext/S0092-8674(23)00472-5		Yijie Yin	
 IPC	IPC Drosophila insulin-like peptides secretion	feeding	yes	Nässel & Winther 2010; Bisen et al. 2025	https://www.sciencedirect.com/science/article/pii/S0301008210001000?via%3Dihub; https://elifesciences.org/articles/98514		Yijie Yin	
 Janu-AstA	Janu-AstA Thirsty water seeking	water balance	yes	Landayan et al., 2021	https://doi.org/10.7554/elife.66286		Fred Wolf	
@@ -494,18 +494,18 @@ PPL101	PPL101 olfactory; aversive; Neuropeptide F (food deprivation) receptor; o
 PPL102	PPL102 aversive						The BANC project	PPL102(y1)(PDL05)
 PPL103	PPL103 aversive; respond to bitter	gustatory, learning_and_memory	yes	Devineni et al. 2021	https://www.sciencedirect.com/science/article/pii/S0960982221014093?via%3Dihub		Yijie Yin	
 PPL106	PPL106 gustatory; aversive; respond to biiter	gustatory, learning_and_memory	yes	Devineni et al. 2021	https://www.sciencedirect.com/science/article/pii/S0960982221014093?via%3Dihub		The BANC project; Yijie Yin	PPL106(a3)(PDL05)
-putative_abd_Dsx_OA	putative_abd_Dsx_OA egg_laying; motor			Wang et al. 2020; Monastirioti 2003; Rezával et al. 2014		**Ablating this neuron does not impair egg production but impaired ovulation - blockage of mature oocytes within the ovaries (no ovipositor extrusion).​**	The BANC project	
+putative_abd_Dsx_OA	putative_abd_Dsx_OA egg_laying; motor			Wang et al. 2020; Monastirioti 2003; Rezával et al. 2014		**Ablating this neuron does not impair egg production but impaired ovulation - blockage of mature oocytes within the ovaries (no ovipositor extrusion).**	The BANC project	
 putative_abd_ppk	putative_abd_ppk oviposition, egg_laying; reproduction	reproduction					The BANC project	
 putative_PU	putative_PU oviposition, egg_laying; reproduction	reproduction		Cury and Axel 2023		uterus sensory neuron	The BANC project	
 putative_SPSN	putative_SPSN egg_laying, oviposition; reproduction	reproduction		Hasemeyer et al., 2009; Rezaval et al., 2012; Yang et al., 2009		sex peptide sensory neurons (3-4 neurons)	The BANC project	
 R1-R6	R1-R6 Achromatic vision	visual		classic (70's Roger Hardie work)			Michael Reiser; Yijie Yin	
 R1-6	R1-6 Achromatic vision	visual		classic (70's Roger Hardie work)				
 R7d	R7d polarized UV detection	visual	yes	Wernet et al. 2012; Weir et al. 2016; classic (70's Roger Hardie work)	https://www.cell.com/current-biology/fulltext/S0960-9822(11)01310-8?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982211013108%3Fshowall%3Dtrue; https://www.jneurosci.org/content/36/19/5397		Michael Reiser; Yijie Yin	
-R7p	R7p UV detection	visual		classic (70's Roger Hardie work)	"https://www.sciencedirect.com/science/article/pii/S1467803920301353		Michael Reiser; Yijie Yin	
+R7p	R7p UV detection	visual		classic (70's Roger Hardie work)	https://www.sciencedirect.com/science/article/pii/S1467803920301353		Michael Reiser; Yijie Yin	
 R7y	R7y UV detection	visual		classic (70's Roger Hardie work)	also newer Christenson, et al		Michael Reiser; Yijie Yin	
 R8d	R8d polarized UV detection	visual	yes	Wernet et al. 2012; Weir et al. 2016; classic (70's Roger Hardie work)	https://www.cell.com/current-biology/fulltext/S0960-9822(11)01310-8?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982211013108%3Fshowall%3Dtrue; https://www.jneurosci.org/content/36/19/5397		Michael Reiser; Yijie Yin	
-R8p	R8p Blue detection	visual		classic (70's Roger Hardie work)	"		Michael Reiser; Yijie Yin	
-R8y	R8y green detection	visual		classic (70's Roger Hardie work)	"		Michael Reiser; Yijie Yin	
+R8p	R8p Blue detection	visual		classic (70's Roger Hardie work)			Michael Reiser; Yijie Yin	
+R8y	R8y green detection	visual		classic (70's Roger Hardie work)			Michael Reiser; Yijie Yin	
 SA_VTV_1	SA_VTV_1 chemosensory	chemosensory					The BANC project	
 SA_VTV_10	SA_VTV_10 chemosensory	chemosensory					The BANC project	
 SA_VTV_2	SA_VTV_2 chemosensory	chemosensory					The BANC project	
@@ -522,7 +522,7 @@ SAch02	SAch02 chemosensory	chemosensory					The BANC project
 SAchxx	SAchxx chemosensory	chemosensory					The BANC project	
 SAD034 	SAD034 inhibit DNg11 front leg rubbing	grooming, movement	yes	Guo et al. 2022	https://www.sciencedirect.com/science/article/pii/S0960982221017425		Yijie Yin	JO-in
 SAD093	SAD093 antennal grooming	grooming, movement	yes	Shiu et al. 2024; Hampel et al. 2015	https://www.nature.com/articles/s41586-024-07763-9; https://doi.org/10.7554/eLife.08758		Yijie Yin	
-SAG	SAG mating_status; reproduction	reproduction		Feng et al. 2014		**SAGs are ascending neurons downstream of SPSN whose activation renders females receptive, and its inactivation renders them unreceptive. Sex neuropeptide inhibits these neurons, gating oviposition downstream in the brain.​**	The BANC project	AN_SMP_2
+SAG	SAG mating_status; reproduction	reproduction		Feng et al. 2014		**SAGs are ascending neurons downstream of SPSN whose activation renders females receptive, and its inactivation renders them unreceptive. Sex neuropeptide inhibits these neurons, gating oviposition downstream in the brain.**	The BANC project	AN_SMP_2
 SAG-like	SAG-like reproduction	reproduction				putative role in reproduction?	The BANC project	AN_FLA_SMP_2
 SApp01	SApp01 haltere						The BANC project	
 SApp02	SApp02 haltere						The BANC project	
@@ -581,7 +581,7 @@ TmY9q	TmY9q Stripe-selective	visual		Seung 2024	https://www.nature.com/articles/
 TmY9q__perp	TmY9q__perp Stripe-selective	visual		Seung 2024	https://www.nature.com/articles/s41586-024-07953-5		Michael Reiser; Yijie Yin	TmY9a
 TNR_VP3a	TNR_VP3a cold sensitive	thermosensory	yes	Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
 TNR_VP3b	TNR_VP3b cold sensitive	thermosensory	yes	Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
-TRN_VP1m	TRN_VP1m thermohygro	"thermosensory, hygrosensory"	yes	Enjin et al. 2016; Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982216302597; https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
+TRN_VP1m	TRN_VP1m thermohygro	thermosensory, hygrosensory	yes	Enjin et al. 2016; Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982216302597; https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
 TRN_VP2	TRN_VP2 hot sensitive	thermosensory	yes	Frank et al. 2017; Marin et al. 2020	https://www.sciencedirect.com/science/article/pii/S0960982217308503; https://elifesciences.org/reviewed-preprints/97766v1		Yijie Yin	
 TuTuB_a	TuTuB_a visual_polarized_light	visual		Hardcastle et al 2021			The BANC project	
 TuTuB_b	TuTuB_b visual_polarized_light	visual		Hardcastle et al 2021			The BANC project	
@@ -634,9 +634,9 @@ VP1d+VP4_l2PN2	VP1d+VP4_l2PN2 evaporation_dry_olf	hygrosensory					The BANC proj
 VP1l+_lvPN	VP1l+_lvPN thermo_hygro	thermosensory					The BANC project	VP1l+_lvPN
 VP1l+VP3_ilPN	VP1l+VP3_ilPN cooling	thermosensory					The BANC project	
 VP1m_l2PN	VP1m_l2PN thermo_hygro	hygrosensory					The BANC project	VP1m_l2PN(lALT)
-VP1m+_lvPN	VP1m+_lvPN thermo_hygro	"thermosensory, hygrosensory"					The BANC project	VP1m+_lvPN(t2ALT)
-VP1m+VP2_lvPN1	VP1m+VP2_lvPN1 humid	"thermosensory, hygrosensory"					Alexander Bates	
-VP1m+VP2_lvPN2	VP1m+VP2_lvPN2 heating_humid; gradient of temperature change	"thermosensory, hygrosensory"	yes	Jouandet et al. 2023	https://www.nature.com/articles/s41467-023-42864-5		The BANC project; Yijie Yin	TPN-III
+VP1m+_lvPN	VP1m+_lvPN thermo_hygro	thermosensory, hygrosensory					The BANC project	VP1m+_lvPN(t2ALT)
+VP1m+VP2_lvPN1	VP1m+VP2_lvPN1 humid	thermosensory, hygrosensory					Alexander Bates	
+VP1m+VP2_lvPN2	VP1m+VP2_lvPN2 heating_humid; gradient of temperature change	thermosensory, hygrosensory	yes	Jouandet et al. 2023	https://www.nature.com/articles/s41467-023-42864-5		The BANC project; Yijie Yin	TPN-III
 VP1m+VP5_ilPN	VP1m+VP5_ilPN humid; hygrosensory						The BANC project	VP1m+VP5_ilPN
 VP2_adPN	VP2_adPN hot-sensing	thermosensory	yes	Frank et al. 2017	https://www.sciencedirect.com/science/article/pii/S0960982217308503		The BANC project; Yijie Yin	TPN
 VP2_l2PN	VP2_l2PN thermo_hygro; thermosensory						The BANC project	VP2_l2PN(lALT)
@@ -654,7 +654,7 @@ VP5+VP2_l2PN	VP5+VP2_l2PN humid_heating	thermosensory, hygrosensory					The BANC
 VP5+VP3_l2PN	VP5+VP3_l2PN humid_cooling;	thermosensory, hygrosensory					The BANC project	VP5+VP3_l2PN(t10ALT); TPN
 VP5+Z_adPN	VP5+Z_adPN thermo_hygro; hygrosensory						The BANC project	VP5+Z_adPN(uniAL+SEZ)
 vPR6	vPR6 mesothoracic, may encode the courtship song inter-pulse-interval			Philipsborn et al. 2011	https://www.cell.com/neuron/fulltext/S0896-6273(11)00057-2		Yijie Yin	
-VS	VS Vertical flow			"			Michael Reiser; Yijie Yin	
+VS	VS Vertical flow						Michael Reiser; Yijie Yin	
 VS1	VS1 visual_vertical_widefieldmotion	visual					The BANC project	
 VS2	VS2 visual_vertical_widefieldmotion	visual					The BANC project	
 VS3	VS3 visual_vertical_widefieldmotion	visual					The BANC project	
