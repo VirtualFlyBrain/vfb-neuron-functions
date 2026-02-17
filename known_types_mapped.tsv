@@ -44,20 +44,20 @@ CB2977	CB2977 aversive memory retrieval; innate olfactory approach	olfactory, le
 CB3009	CB3009 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	LHPD2a1	FBbt:00049368	adult lateral horn PD2a1 neuron	
 CB3198	CB3198 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	LHPD2b1	FBbt:00049371	adult lateral horn PD2b1 neuron	
 CB3205	CB3205 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	LHPD2a1	FBbt:00049368	adult lateral horn PD2a1 neuron	
-CEM	CEM crop-innervating entiric motor neuron; postingestive decision to let food pass to the crop	movement	yes	Cui et al. 2024	doi.org/10.1101/2024.09.02.610892		Yijie Yin				
+CEM	CEM crop-innervating entiric motor neuron; postingestive decision to let food pass to the crop	movement	yes	Cui et al. 2024	doi.org/10.1101/2024.09.02.610892		Yijie Yin		FBbt:00053575	crop-innervating enteric motor neuron	
 claw_tpGRN	claw_tpGRN Ir56d; Gr64e; taste peg gustatory receptor neuron; sensing carbonation & fatty acids	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2.full.pdf+html		Yijie Yin				
-CMU	CMU uterine_contraction; egg_laying	reproduction		Cury and Axel 2023		Circular muscle of the uterus	The BANC project				
+CMU	CMU uterine_contraction; egg_laying	reproduction		Cury and Axel 2023		Circular muscle of the uterus	The BANC project		FBbt:00053577	circular muscle of uterus motor neuron	
 CRZ01,CRZ02	CRZ01,CRZ02 heart; neuromodulatory	neuromodulatory				neuropeptide: Corazonin	The BANC project	CRZ			
-CvN_A1	CvN_A1 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
-CvN_A2	CvN_A2 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
-CvN1	CvN1 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
-CvN2	CvN2 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
-CvN3	CvN3 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
+CvN_A1	CvN_A1 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053212	adult cervical nerve neck motor neuron A1	
+CvN_A2	CvN_A2 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053213	adult cervical nerve neck motor neuron A2	
+CvN1	CvN1 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053204	adult cervical nerve neck motor neuron 1	
+CvN2	CvN2 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053205	adult cervical nerve neck motor neuron 2	
+CvN3	CvN3 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053206	adult cervical nerve neck motor neuron 3	
 CvN4	CvN4 neck_control; neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:20004592	adult CB0899 neuron	
 CvN5	CvN5 neck_control; neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:20004540	adult CB0838 neuron	
 CvN6	CvN6 neck_control; neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin	CB0916	FBbt:20004609	adult CB0916 neuron	
 CvN7	CvN7 pitch head downward 10-15 degrees; gaze stabilization; neck_control 	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin	CB0831	FBbt:20004534	adult CB0831 neuron	
-CvN8	CvN8 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
+CvN8	CvN8 neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053211	adult cervical nerve neck motor neuron 8	
 D_adPN	D_adPN dangerous; negative covariance with odour valence	olfactory	yes	Lizbinski et al. 2025	https://www.biorxiv.org/content/10.1101/2025.11.08.687380v1		The BANC project; Yijie Yin		FBbt:00067355	adult antennal lobe projection neuron D adPN	
 DA1_lPN	DA1_lPN cVA male pheromone detection	olfactory	yes	Taisz et al. 2023; Wang & Anderson 2010; Kurtovic et al. 2007	https://www.cell.com/cell/fulltext/S0092-8674(23)00472-5; https://www.nature.com/articles/nature08678; https://www.nature.com/articles/nature05672		Yijie Yin; Alexander Bates		FBbt:00067363	adult antennal lobe projection neuron DA1 lPN	
 DA1_vPN	DA1_vPN cVA male pheromone	olfactory	yes	Taisz et al. 2023; Wang & Anderson 2010; Kurtovic et al. 2007	https://www.cell.com/cell/fulltext/S0092-8674(23)00472-5; https://www.nature.com/articles/nature08678; https://www.nature.com/articles/nature05672		The BANC project; Yijie Yin		FBbt:00067372	adult antennal lobe projection neuron DA1 vPN	
@@ -608,7 +608,7 @@ VC5_adPN	VC5_adPN decaying_fruit	olfactory					The BANC project	VM6_adPN	FBbt:00
 VC5_lvPN	VC5_lvPN decaying_fruit	olfactory					The BANC project	VM6_lvPN	FBbt:00049655	adult antennal lobe projection neuron VC5 lvPN	
 vCal1	vCal1 visual_vertical_widefieldmotion	visual		Zhao et al 2024		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project		FBbt:20001627	lobula plate tangential neuron vCal1	
 vCH	vCH visual_horizontal_widefieldmotion	visual		Wei et al 2020		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project		FBbt:00048127	ventral centrifugal horizontal neuron	
-VCvN	VCvN neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin				
+VCvN	VCvN neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:00053175	adult ventral cervical nerve neck motor neuron	
 VES041	VES041 inhibit flight saccade	flight		Ros et al. 2024	https://www.cell.com/current-biology/fulltext/S0960-9822(23)01747-5?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982223017475%3Fshowall%3Dtrue		Yijie Yin		FBbt:20003507	adult vest neuron 041	
 VL1_ilPN	VL1_ilPN decaying_fruit	olfactory					The BANC project	VL1_ilPN	FBbt:00049772	adult antennal lobe projection neuron VL1 ilPN	
 VL1_vPN	VL1_vPN decaying_fruit	olfactory					The BANC project	VL1_vPN	FBbt:00007444	adult antennal lobe projection neuron VL1 vPN	
