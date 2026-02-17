@@ -34,9 +34,9 @@ AOTU025	AOTU025 lateral visual field object detection; steer object towards midl
 aSP22	aSP22 courtship behavioural motif	reproduction, movement	yes	McKellar et al. 2019	https://www.cell.com/current-biology/abstract/S0960-9822(18)31651-8		Yijie Yin		FBbt:00051200	descending neuron of the anterior dorsal brain DNa12	
 CB0041	CB0041 control the length of yeast feeding bursts	feeding	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671815v2		Yijie Yin		FBbt:20003898	adult CB0041 neuron	
 CB0339	CB0339 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	LHPD2b1	FBbt:00049371	adult lateral horn PD2b1 neuron	
-CB0726	CB0726 heart; neuromodulatory	neuromodulatory				neuropeptide: Corazonin	The BANC project	I_NSC_CRZ			
+CB0726	CB0726 heart; neuromodulatory	neuromodulatory				neuropeptide: Corazonin	The BANC project	I_NSC_CRZ	FBbt:20004450	adult CB0726 neuron	
 CB0831	CB0831 pitch head downward 10-15 degrees; gaze stabilization; neck_control 	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin		FBbt:20004534	adult CB0831 neuron	
-CB0905	CB0905 heart; neuromodulatory	neuromodulatory				neuropeptide: Corazonin	The BANC project	I_NSC_CRZ			
+CB0905	CB0905 heart; neuromodulatory	neuromodulatory				neuropeptide: Corazonin	The BANC project	I_NSC_CRZ	FBbt:20004598	adult CB0905 neuron	
 CB0916	CB0916 neck_control; neck_motor	movement		Gorko et al. 2024	https://www.nature.com/articles/s41586-024-07222-5		Alexander Bates; Yijie Yin	CvN6	FBbt:20004609	adult CB0916 neuron	
 CB0997	CB0997 rate of change of cVA concentration	olfactory	yes	Taisz et al. 2023	https://www.cell.com/cell/fulltext/S0092-8674(23)00472-5		Yijie Yin	LHAV2a2	FBbt:20004683	adult CB0997 neuron	
 CB2842	CB2842 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	LHPD2a1	FBbt:00049368	adult lateral horn PD2a1 neuron	
@@ -170,7 +170,7 @@ DNp29	DNp29 neuromodulatory (dNPF), stimulation mimics food-deprivation; abdomen
 DNp30	DNp30 neuromodulatory; hunger	neuromodulatory		Soderberg et al., 2012 (immuno)		neuropeptide: SIFamide	The BANC project	DSKMP1A	FBbt:00051433	adult Drosulfakinin MP1a neuron	
 DNp31	DNp31 wing power	flight							FBbt:00047664	descending neuron of the posterior brain DNp31	
 DNp32	DNp32 neuromodulatory	neuromodulatory		Carlsson et al., 2010 (immuno)		neuropeptide: myosupressin	The BANC project		FBbt:00047665	descending neuron of the posterior brain DNp32	
-DNp37	DNp37 vaginal_plate_opening	reproduction		Wang et al. 2021		neuropeptide: dNPF vaginal plate opening (gets auditory inputs from vpoEN and vpoIN and pC1 input) dsx+, fru-, and cholinergic (wang et al 2020)	The BANC project	vpoDN_pMN2			
+DNp37	DNp37 vaginal_plate_opening	reproduction		Wang et al. 2021		neuropeptide: dNPF vaginal plate opening (gets auditory inputs from vpoEN and vpoIN and pC1 input) dsx+, fru-, and cholinergic (wang et al 2020)	The BANC project	vpoDN_pMN2	FBbt:00048405	adult vaginal plate opening descending neuron vpoDN	
 DNp42	DNp42 backing up; geosmin avoidance	walking		Huoviala et al. 2020; Braun et al. 2024	https://www.biorxiv.org/content/10.1101/394403v2		Yijie Yin; Alexander Bates		FBbt:00052181	descending neuron of the posterior brain DNp42	
 DNp44	DNp44 thermo_hygro;	thermosensory, hygrosensory		Marin et al., 2020	https://www.cell.com/current-biology/abstract/S0960-9822(20)30844-7		The BANC project		FBbt:00049697	descending neuron of the posterior brain DNp44	
 DNp50	DNp50 backwards walking	walking		Bidaye et al 2014			Alexander Bates; Yijie Yin	MDN	FBbt:00111308	adult moonwalker descending neuron	
@@ -193,8 +193,8 @@ ER2	ER2 (59 (w), 30 (h)) degrees visual receptive field	visual	yes	Garner et al.
 ER4d	ER4d ipsilateral vertical bar detection	visual	yes	Garner et al. 2024	https://www.nature.com/articles/s41586-024-07967-z		Yijie Yin		FBbt:00007538	adult ellipsoid body ring neuron R4d	
 FB2B	FB2B innate electric shock avoidance	nociception	yes	Bodas et al. 2026	doi.org/10.64898/2026.02.05.704045		Yijie Yin				
 FC2	FC2 allocentric goal	navigation		Mussells-Pires et al. 2024	https://www.nature.com/articles/s41586-023-07006-3		Yijie Yin				
-FD1	FD1 visual_horizontal_widefieldmotion; visual			Wei et al 2020		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project				
-FD3	FD3 visual_horizontal_widefieldmotion; visual			Wei et al 2020		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project				
+FD1	FD1 visual_horizontal_widefieldmotion; visual			Wei et al 2020		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project		FBbt:00052268	lobula plate tangential neuron FD1	
+FD3	FD3 visual_horizontal_widefieldmotion; visual			Wei et al 2020		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project		FBbt:00052269	lobula plate tangential neuron FD3	
 GLNO	GLNO rotational velocity	navigation	yes	Hulse et al. 2023	https://www.biorxiv.org/content/10.1101/2023.09.25.559373v1		Yijie Yin		FBbt:00049135	adult lateral accessory lobe-gall-nodulus 1 neuron	
 H1	H1 visual_horizontal_widefieldmotion; visual			Wei et al 2020		visual response predicted from lobula plate arborization pattern but very likely to be correct - HHY	The BANC project		FBbt:00047991	lobula plate tangential neuron H1	
 H2	H2 visual_horizontal_widefieldmotion; visual						The BANC project		FBbt:00052267	lobula plate tangential neuron H2	
@@ -212,21 +212,21 @@ IPC	IPC Drosophila insulin-like peptides secretion	feeding	yes	Nässel & Winther
 Janu-AstA	Janu-AstA Thirsty water seeking	water balance	yes	Landayan et al., 2021	https://doi.org/10.7554/elife.66286		Fred Wolf				
 JO-A	JO-A high frequency sound; courtship song; activation in flight		yes	Kamikouchi et al. 2009; Mamiya & Dickinson 2015	https://www.nature.com/articles/nature07810; https://www.jneurosci.org/content/35/20/7977		Yijie Yin		FBbt:00100008	zone A Johnston organ neuron	
 JO-B	JO-B low frequency sound			Kamikouchi et al. 2009	https://www.nature.com/articles/nature07810		Yijie Yin		FBbt:00100009	zone B Johnston organ neuron	
-JO-C	JO-C static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020; Mamiya & Dickinson 2015	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976; https://www.jneurosci.org/content/35/20/7977		Yijie Yin				
-JO-CA	JO-CA static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-CL	JO-CL static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-CM	JO-CM static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-DA	JO-DA vibration and static deflection of antennal receiver; wing beat oscillation power in flight			Matsuo et al. 2014	https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00179/full		Yijie Yin				
-JO-DP	JO-DP vibration and static deflection of antennal receiver; wing beat oscillation power in flight			Matsuo et al. 2014	https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00179/full		Yijie Yin				
-JO-D	JO-D vibration and static deflection of antennal receiver; wing beat oscillation power in flight			Matsuo et al. 2014	https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00179/full		Yijie Yin				
-JO-EDM	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-EVP	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-EV	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-EVL	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-EDP	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-EDC	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
-JO-EVM	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping; activation in flight; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020; Mamiya & Dickinson 2015	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976; https://www.jneurosci.org/content/35/20/7977		Yijie Yin				
-JO-E	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin				
+JO-C	JO-C static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020; Mamiya & Dickinson 2015	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976; https://www.jneurosci.org/content/35/20/7977		Yijie Yin		FBbt:00100010	zone C Johnston organ neuron	
+JO-CA	JO-CA static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049968	Johnston organ neuron CA	
+JO-CL	JO-CL static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00047918	Johnston organ neuron CL	
+JO-CM	JO-CM static deflection (push) of antenna; activation induces grooming & wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00047919	Johnston organ neuron CM	
+JO-DA	JO-DA vibration and static deflection of antennal receiver; wing beat oscillation power in flight			Matsuo et al. 2014	https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00179/full		Yijie Yin		FBbt:00049969	Johnston organ neuron DA	
+JO-DP	JO-DP vibration and static deflection of antennal receiver; wing beat oscillation power in flight			Matsuo et al. 2014	https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00179/full		Yijie Yin		FBbt:00047920	Johnston organ neuron DP	
+JO-D	JO-D vibration and static deflection of antennal receiver; wing beat oscillation power in flight			Matsuo et al. 2014	https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00179/full		Yijie Yin		FBbt:00100020	zone D Johnston organ neuron	
+JO-EDM	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049972	Johnston organ neuron EDM	
+JO-EVP	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049974	Johnston organ neuron EVP	
+JO-EV	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049976	Johnston organ neuron EV	
+JO-EVL	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049975	Johnston organ neuron EVL	
+JO-EDP	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049971	Johnston organ neuron EDP	
+JO-EDC	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049973	Johnston organ neuron EDC	
+JO-EVM	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping; activation in flight; wing beat oscillation power in flight	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020; Mamiya & Dickinson 2015	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976; https://www.jneurosci.org/content/35/20/7977		Yijie Yin		FBbt:00047924	Johnston organ neuron EVM	
+JO-E	JO-E static deflection (pull) of antenna; activation induces grooming and wing flapping	grooming, movement	yes	Kamikouchi et al. 2009; Hampel et al. 2020	https://www.nature.com/articles/nature07810; https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00100021	zone E Johnston organ neuron	
 JO-F	JO-F backward motion followed by grooming	grooming, movement	yes	Hampel et al. 2020	https://doi.org/10.7554/eLife.59976		Yijie Yin		FBbt:00049956	zone F Johnston organ neuron	
 l-LNv	I-LNv clock neuron			Reinhard et al 2021	https://onlinelibrary.wiley.com/doi/full/10.1002/cne.25294		Judith Hoeller		FBbt:00003763	l-LNv neuron	
 L1	L1 ON motion input; OFF responsive	visual	yes	Strother et al. 2014; Shinomiya et al. 2019; Clark et al. 2011; Rister et al. 2007; Joesch et al. 2010; Tuthill et al. 2013; Currier & Clandinin 2025	https://www.cell.com/current-biology/fulltext/S0960-9822(14)00276-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982214002760%3Fshowall%3Dtrue; https://elifesciences.org/articles/40025; https://www.cell.com/neuron/fulltext/S0896-6273(11)00441-7?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627311004417%3Fshowall%3Dtrue; https://www.cell.com/neuron/fulltext/S0896-6273(07)00712-X?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS089662730700712X%3Fshowall%3Dtrue; https://www.nature.com/articles/nature09545; https://www.cell.com/neuron/fulltext/S0896-6273(13)00444-3?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627313004443%3Fshowall%3Dtrue; https://www.cell.com/cell/abstract/S0092-8674(25)00518-5	this is true but also wrong since L1, L2, and L3 are all OFF cells, the difference emerge downstream	Michael Reiser; Yijie Yin		FBbt:00003719	lamina monopolar neuron L1	
@@ -275,23 +275,23 @@ LgLG6	LgLG6 fru+/ ppk23+/ ppk25+ leg bristle local gustatory receptor neuron; co
 LgLG7	LgLG7 fru+/ ppk23+/ ppk25+ leg bristle local gustatory receptor neuron; contact pheromone sensation	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2		Yijie Yin				
 LgLG8	LgLG8 fru+/ ppk23+/ ppk25+ leg bristle local gustatory receptor neuron; contact pheromone sensation	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2		Yijie Yin				
 LHAD1b2	LHAD1b2 drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049323	adult lateral horn AD1b2 neuron	
-LHAD1b2_a	LHAD1b2_a drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD1b2_b	LHAD1b2_b drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD1b2_c	LHAD1b2_c drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD1b2_d	LHAD1b2_d drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD1b2_a,LHAD1b2_c	LHAD1b2_a,LHAD1b2_c drive approach 		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1	LHAD3b1 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
+LHAD1b2_a	LHAD1b2_a drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049323	adult lateral horn AD1b2 neuron	
+LHAD1b2_b	LHAD1b2_b drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049323	adult lateral horn AD1b2 neuron	
+LHAD1b2_c	LHAD1b2_c drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049323	adult lateral horn AD1b2 neuron	
+LHAD1b2_d	LHAD1b2_d drive approach		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049323	adult lateral horn AD1b2 neuron	
+LHAD1b2_a,LHAD1b2_c	LHAD1b2_a,LHAD1b2_c drive approach 		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049323	adult lateral horn AD1b2 neuron	
+LHAD3b1	LHAD3b1 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
 LHAD3b1_a	LHAD3b1_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:20006484	adult CB2980 neuron	
-LHAD3b1_b	LHAD3b1_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1_c	LHAD3b1_c aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1_d	LHAD3b1_d aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1_e	LHAD3b1_e aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1_f	LHAD3b1_f aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1_g	LHAD3b1_g aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHAD3b1_h	LHAD3b1_h aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
+LHAD3b1_b	LHAD3b1_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
+LHAD3b1_c	LHAD3b1_c aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
+LHAD3b1_d	LHAD3b1_d aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
+LHAD3b1_e	LHAD3b1_e aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
+LHAD3b1_f	LHAD3b1_f aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
+LHAD3b1_g	LHAD3b1_g aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
+LHAD3b1_h	LHAD3b1_h aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049329	adult lateral horn AD3b1 neuron	
 LHAV1a1	LHAV1a1 aversive odour processing	olfactory	yes	Dolan et al. 2019; Huoviala et al. 2020	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/; https://www.biorxiv.org/content/10.1101/394403v2		Yijie Yin		FBbt:00049331	adult lateral horn AV1a1 neuron	
 LHAV2a2	LHAV2a2 rate of change of cVA concentration	olfactory	yes	Taisz et al. 2023	https://www.cell.com/cell/fulltext/S0092-8674(23)00472-5		Yijie Yin	CB0997	FBbt:20004683	adult CB0997 neuron	
-LHAV4g8	LHAV4g8 negative covariance with odour valence	olfactory	yes	Lizbinski et al. 2025	https://www.biorxiv.org/content/10.1101/2025.11.08.687380v1		Yijie Yin				
+LHAV4g8	LHAV4g8 negative covariance with odour valence	olfactory	yes	Lizbinski et al. 2025	https://www.biorxiv.org/content/10.1101/2025.11.08.687380v1		Yijie Yin		FBbt:00051548	adult lateral horn AV4g8 neuron	
 LHPD2a1	LHPD2a1 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	CB2842; CB2977; CB3009; CB3205	FBbt:00049368	adult lateral horn PD2a1 neuron	
 LHPD2b1	LHPD2b1 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	CB3198; CB0339	FBbt:00049371	adult lateral horn PD2b1 neuron	
 LHPV2g1	LHPV2g1 early hot/cold avoidance; sense temperature rapid change & value; not aversive odour avoidance	thermosensory	yes	Jouandet et al. 2023	https://www.nature.com/articles/s41467-023-42864-5		Yijie Yin	TLHON	FBbt:00051795	adult lateral horn PV2g1 neuron	
@@ -299,24 +299,24 @@ LHPV4a1	LHPV4a1 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc
 LHPV4a1,LHPV4a2	LHPV4a1,LHPV4a2 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
 LHPV4a2	LHPV4a2 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049385	adult lateral horn PV4a2 neuron	
 LHPV4a3	LHPV4a3 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049386	adult lateral horn PV4a3 neuron	
-LHPV4a4	LHPV4a4 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHPV4a4_a	LHPV4a4_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHPV4a4_b	LHPV4a4_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHPV4a4_c	LHPV4a4_c aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
+LHPV4a4	LHPV4a4 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049387	adult lateral horn PV4a4 neuron	
+LHPV4a4_a	LHPV4a4_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049387	adult lateral horn PV4a4 neuron	
+LHPV4a4_b	LHPV4a4_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049387	adult lateral horn PV4a4 neuron	
+LHPV4a4_c	LHPV4a4_c aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049387	adult lateral horn PV4a4 neuron	
 LHPV4a5	LHPV4a5 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:20006234	adult CB2707 neuron	
-LHPV4a5_a	LHPV4a5_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHPV4a5_b	LHPV4a5_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
+LHPV4a5_a	LHPV4a5_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049388	adult lateral horn PV4a5 neuron	
+LHPV4a5_b	LHPV4a5_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049388	adult lateral horn PV4a5 neuron	
 LHPV4a5, LHPV4k1	LHPV4a5, LHPV4k1 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
 LHPV5a1	LHPV5a1 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049407	adult lateral horn PV5a1 neuron	
-LHPV5a1_a	LHPV5a1_a attraction (LH290)	olfactory	yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
-LHPV5a1_b	LHPV5a1_b attraction (LH290)	olfactory	yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin				
+LHPV5a1_a	LHPV5a1_a attraction (LH290)	olfactory	yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049407	adult lateral horn PV5a1 neuron	
+LHPV5a1_b	LHPV5a1_b attraction (LH290)	olfactory	yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049407	adult lateral horn PV5a1 neuron	
 LHPV5a2	LHPV5a2 positive covariance with odour valence	olfactory	yes	Lizbinski et al. 2025	https://www.biorxiv.org/content/10.1101/2025.11.08.687380v1		Yijie Yin		FBbt:00049408	adult lateral horn PV5a2 neuron	
 LHPV5c1	LHPV5c1 aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	
-LHPV5c1_a	LHPV5c1_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	parent_term
-LHPV5c1_b	LHPV5c1_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	parent_term
-LHPV5c1_c	LHPV5c1_c aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	parent_term
-LHPV5c1_d	LHPV5c1_d aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	parent_term
-LHPV5k1	LHPV5k1 integrate leucokinin-dependent hunger signals with food odours to suppress nociceptive avoidance (FB2B) and favour food seeking	olfactory	yes	Bodas et al. 2026	doi.org/10.64898/2026.02.05.704045		Yijie Yin				
+LHPV5c1_a	LHPV5c1_a aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	
+LHPV5c1_b	LHPV5c1_b aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	
+LHPV5c1_c	LHPV5c1_c aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	
+LHPV5c1_d	LHPV5c1_d aversion		yes	Dolan et al. 2019	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6529221/		Yijie Yin		FBbt:00049413	adult lateral horn PV5c1 neuron	
+LHPV5k1	LHPV5k1 integrate leucokinin-dependent hunger signals with food odours to suppress nociceptive avoidance (FB2B) and favour food seeking	olfactory	yes	Bodas et al. 2026	doi.org/10.64898/2026.02.05.704045		Yijie Yin		FBbt:00049419	adult lateral horn-fan-shaped body layer 2 neuron	
 lLN2F_b	lLN2F_b presynaptic global gain control	olfactory		Barth-Maron et al. 2023	https://www.cell.com/current-biology/abstract/S0960-9822(23)01442-2		Yijie Yin		FBbt:00049812	adult antennal lobe local neuron lLN2F	parent_term
 lLN2P_a	lLN2P_a intra-glomerular gain control	olfactory		Barth-Maron et al. 2023	https://www.cell.com/current-biology/abstract/S0960-9822(23)01442-2		Yijie Yin		FBbt:00049813	adult antennal lobe local neuron lLN2P	parent_term
 lLN2P_b	lLN2P_b intra-glomerular gain control	olfactory		Barth-Maron et al. 2023	https://www.cell.com/current-biology/abstract/S0960-9822(23)01442-2		Yijie Yin		FBbt:00049813	adult antennal lobe local neuron lLN2P	parent_term
@@ -442,10 +442,10 @@ ORN_VA2	ORN_VA2 vinegar attraction; phasic CO2 response; CO2 attraction	olfactor
 ORN_VL2a	ORN_VL2a decaying_fruit/plant_matter; activation promotes male courtship	olfactory	yes	Grosjean et al. 2011	https://www.nature.com/articles/nature10428		Yijie Yin		FBbt:00110007	adult olfactory receptor neuron Ir84a	
 ORN_VM7d	ORN_VM7d attraction	olfactory	yes	Bell & Wilson 2016	https://www.cell.com/neuron/fulltext/S0896-6273(16)30264-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627316302641%3Fshowall%3Dtrue		Yijie Yin		FBbt:00067042	adult olfactory receptor neuron Or42a	
 ORN_VM7v	ORN_VM7v attraction	olfactory	yes	Bell & Wilson 2016	https://www.cell.com/neuron/fulltext/S0896-6273(16)30264-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627316302641%3Fshowall%3Dtrue		Yijie Yin		FBbt:00067007	adult olfactory receptor neuron Or59c	
-oviDNa	oviDNa oviposition, abdomen_curl	reproduction		Wang et al 2020		oviDNa is the same as oviDNa\_a (But in MANC they only have the label oviDN)	The BANC project	oviDNa			
-oviDNa_a	oviDNa_a oviposition, abdomen_curl	reproduction		Wang et al 2020			The BANC project	oviDNa			
-oviDNa_b	oviDNa_b oviposition, abdomen_curl	reproduction		Wang et al 2020			The BANC project	oviDNb			
-oviDNb	oviDNb oviposition, abdomen_curl	reproduction		Wang et al 2020			The BANC project	oviDNb			
+oviDNa	oviDNa oviposition, abdomen_curl	reproduction		Wang et al 2020		oviDNa is the same as oviDNa\_a (But in MANC they only have the label oviDN)	The BANC project	oviDNa	FBbt:00049920	oviposition descending neuron oviDNa	
+oviDNa_a	oviDNa_a oviposition, abdomen_curl	reproduction		Wang et al 2020			The BANC project	oviDNa	FBbt:00049920	oviposition descending neuron oviDNa	
+oviDNa_b	oviDNa_b oviposition, abdomen_curl	reproduction		Wang et al 2020			The BANC project	oviDNb	FBbt:00049920	oviposition descending neuron oviDNa	
+oviDNb	oviDNb oviposition, abdomen_curl	reproduction		Wang et al 2020			The BANC project	oviDNb	FBbt:00049921	oviposition descending neuron oviDNb	
 oviIN	oviIN oviposition	reproduction		Wang et al. 2020			The BANC project		FBbt:00049928	oviposition inhibitory neuron	
 P1 	P1 courtship song	reproduction		Philipsborn et al. 2011; Kohatsu et al. 2011	https://www.cell.com/neuron/fulltext/S0896-6273(11)00057-2; https://www.cell.com/neuron/fulltext/S0896-6273(10)01040-8		Yijie Yin				
 P2b	P2b courtship	reproduction		Kohatsu et al. 2011	https://www.cell.com/neuron/fulltext/S0896-6273(10)01040-8		Yijie Yin				
@@ -454,13 +454,13 @@ PAM01	PAM01 appetitive_learning; nutrient-dependent long-term memory	learning_an
 PAM02	PAM02 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM02(B'2a)	FBbt:00111016	dopaminergic PAM neuron 2	
 PAM03	PAM03 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM03(B2B'2a)	FBbt:00100231	dopaminergic PAM neuron 3	
 PAM04	PAM04 appetitive_learning; sufficnet for long-term memory of odour when hungry	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM04_a(B2); PAM04(B2); PAM04_b(B2)	FBbt:00110993	dopaminergic PAM neuron 4	
-PAM05_a	PAM05_a appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM05_a(B'2p)			
-PAM05_b	PAM05_b appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM05_b(B'2p)			
+PAM05_a	PAM05_a appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM05_a(B'2p)	FBbt:00111017	dopaminergic PAM neuron 5	
+PAM05_b	PAM05_b appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM05_b(B'2p)	FBbt:00111017	dopaminergic PAM neuron 5	
 PAM06	PAM06 appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM06(B'2m); PAM06_a(B'2m); PAM06_b(B'2m)	FBbt:00111018	dopaminergic PAM neuron 6	
 PAM07	PAM07 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM07(y4<y1y2)	FBbt:00111019	dopaminergic PAM neuron 7	
-PAM08_a	PAM08_a appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM08_c(y4)(ADM08)			
-PAM08_a	PAM08_a appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM08_a(y4)			
-PAM08_b	PAM08_b appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM08_b(y4)			
+PAM08_a	PAM08_a appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM08_c(y4)(ADM08)	FBbt:00111020	dopaminergic PAM neuron 8	
+PAM08_a	PAM08_a appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM08_a(y4)	FBbt:00111020	dopaminergic PAM neuron 8	
+PAM08_b	PAM08_b appetitive_learning; sweet taste through octopamine for short-term memory	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM08_b(y4)	FBbt:00111020	dopaminergic PAM neuron 8	
 PAM08	PAM08 appetitive_learning; sweet taste through octopamine for short-term memory; respond to sugar and water	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015; Devineni et al. 2021	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub; https://www.sciencedirect.com/science/article/pii/S0960982221014093?via%3Dihub		The BANC project; Yijie Yin		FBbt:00111020	dopaminergic PAM neuron 8	
 PAM09	PAM09 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM09(B1ped)	FBbt:00111021	dopaminergic PAM neuron 9	
 PAM10	PAM10 appetitive_learning; sufficnet for long-term memory of odour when hungry	learning_and_memory	yes	Liu et al. 2012; Huetteroth et al. 2015	https://www.nature.com/articles/nature11304; https://www.sciencedirect.com/science/article/pii/S0960982215000688?via%3Dihub		The BANC project; Yijie Yin	PAM10(B1)	FBbt:00110994	dopaminergic PAM neuron 10	
@@ -468,14 +468,14 @@ PAM11	PAM11 appetitive_learning; sufficnet for long-term memory of odour when hu
 PAM12	PAM12 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM12(y3)	FBbt:00100230	dopaminergic PAM neuron 12	
 PAM13	PAM13 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM13(B'1ap)	FBbt:00111023	dopaminergic PAM neuron 13	
 PAM14	PAM14 appetitive_learning; appetitive	learning_and_memory	yes	Liu et al. 2012	https://www.nature.com/articles/nature11304		The BANC project; Yijie Yin	PAM14(B'1m)	FBbt:00111024	dopaminergic PAM neuron 14	
-pC1a	pC1a oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying	reproduction		Wang et al. 2020			The BANC project				
-pC1b	pC1b oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying	reproduction		Wang et al. 2020			The BANC project				
-pC1c	pC1c oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying	reproduction		Wang et al. 2020			The BANC project				
-pC1d	pC1d oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying, aggression	reproduction		Wang et al. 2020			The BANC project				
-pC1e	pC1e oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying, aggression	reproduction		Wang et al. 2020			The BANC project				
-PEN	PEN heading direction & angular velocity	navigation	yes	Green et al. 2017; Turner-Evans et al. 2017	https://www.nature.com/articles/nature22343; https://doi.org/10.7554/eLife.23496		Yijie Yin				
-PEN_a	PEN_a heading direction & angular velocity	navigation	yes	Green et al. 2017; Turner-Evans et al. 2017	https://www.nature.com/articles/nature22343; https://doi.org/10.7554/eLife.23496		Yijie Yin				
-PEN_b	PEN_b heading direction & angular velocity	navigation	yes	Green et al. 2017; Turner-Evans et al. 2017	https://www.nature.com/articles/nature22343; https://doi.org/10.7554/eLife.23496		Yijie Yin				
+pC1a	pC1a oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying	reproduction		Wang et al. 2020			The BANC project		FBbt:00049922	adult doublesex pC1a (female) neuron	
+pC1b	pC1b oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying	reproduction		Wang et al. 2020			The BANC project		FBbt:00049923	adult doublesex pC1b (female) neuron	
+pC1c	pC1c oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying	reproduction		Wang et al. 2020			The BANC project		FBbt:00049924	adult doublesex pC1c (female) neuron	
+pC1d	pC1d oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying, aggression	reproduction		Wang et al. 2020			The BANC project		FBbt:00049925	adult doublesex pC1d (female) neuron	
+pC1e	pC1e oviposition, vaginal_plate_opening, abdomen_curl, reproduction, sine_song, pulse_song, courtship, egg_laying, aggression	reproduction		Wang et al. 2020			The BANC project		FBbt:00049926	adult doublesex pC1e (female) neuron	
+PEN	PEN heading direction & angular velocity	navigation	yes	Green et al. 2017; Turner-Evans et al. 2017	https://www.nature.com/articles/nature22343; https://doi.org/10.7554/eLife.23496		Yijie Yin		FBbt:00003646	adult protocerebral bridge 1 glomerulus-ellipsoid body tile-nodulus 1 neuron	
+PEN_a	PEN_a heading direction & angular velocity	navigation	yes	Green et al. 2017; Turner-Evans et al. 2017	https://www.nature.com/articles/nature22343; https://doi.org/10.7554/eLife.23496		Yijie Yin		FBbt:00049803	adult protocerebral bridge 1 glomerulus-ellipsoid body tile-nodulus 1 neuron 1	
+PEN_b	PEN_b heading direction & angular velocity	navigation	yes	Green et al. 2017; Turner-Evans et al. 2017	https://www.nature.com/articles/nature22343; https://doi.org/10.7554/eLife.23496		Yijie Yin		FBbt:00049804	adult protocerebral bridge 1 glomerulus-ellipsoid body tile-nodulus 1 neuron 2	
 PFL2	PFL2 slowing & turning	walking, navigation		Westeinde et al. 2024	https://www.nature.com/articles/s41586-024-07039-2		Yijie Yin		FBbt:00111451	adult protocerebral bridge 1 glomerulus-fan-shaped body layers 4 and 5-bilateral lateral accessory lobe neuron	
 PFL3	PFL3 compare allocentric heading vs. goal angles	navigation		Mussells-Pires et al. 2024	https://www.nature.com/articles/s41586-023-07006-3		Yijie Yin		FBbt:00111443	adult protocerebral bridge 1 glomerulus-fan-shaped body layers 4 and 5-unilateral lateral accessory lobe neuron	
 PhG1a	PhG1a Gr64e (detect glycerol and induce proboscis extension), ppk28, Ir67c, Gr77a, Ir60d; pharyngeal gustatory recetor neurons	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2.full.pdf+html		Yijie Yin				
@@ -550,7 +550,7 @@ SAxx02	SAxx02 nociception						The BANC project		FBbt:20011231	adult SAxx02 neur
 SMP092	SMP092 activation: reduce groundspeed	walking		Gattuso et al. 2025	https://www.pnas.org/doi/10.1073/pnas.2407626122		Yijie Yin		FBbt:20002954	adult superior medial protocerebrum neuron 092	
 SMP550	SMP550 oviposition; reproduction			Wang et al. 2020			The BANC project	oviEN	FBbt:20003412	adult superior medial protocerebrum neuron 550	
 SNpp19	SNpp19 prosternal						The BANC project		FBbt:00053164	adult prosternal sense organ neuron	
-SNxx27	SNxx27 nociception						The BANC project				
+SNxx27	SNxx27 nociception						The BANC project		FBbt:20011323	adult SNxx27 neuron	
 SNxx29	SNxx29 nociception						The BANC project		FBbt:20011325	adult SNxx29 neuron	
 SNxx31	SNxx31 wing						The BANC project		FBbt:20011327	adult SNxx31 neuron	
 T2	T2 orientation selective	visual	yes	Currier & Clandinin 2025	https://www.cell.com/cell/abstract/S0092-8674(25)00518-5		Yijie Yin		FBbt:00003728	T2 neuron	
@@ -655,12 +655,12 @@ VP5+VP3_l2PN	VP5+VP3_l2PN humid_cooling;	thermosensory, hygrosensory					The BAN
 VP5+Z_adPN	VP5+Z_adPN thermo_hygro; hygrosensory						The BANC project	VP5+Z_adPN(uniAL+SEZ)	FBbt:00100374	adult uniglomerular projection neuron VP5+SEZ adPN	
 vPR6	vPR6 mesothoracic, may encode the courtship song inter-pulse-interval			Philipsborn et al. 2011	https://www.cell.com/neuron/fulltext/S0896-6273(11)00057-2		Yijie Yin		FBbt:00052714	adult fruitless vPR6 neuron	
 VS	VS Vertical flow						Michael Reiser; Yijie Yin		FBbt:00007516	vertical system neuron	
-VS1	VS1 visual_vertical_widefieldmotion	visual					The BANC project				
-VS2	VS2 visual_vertical_widefieldmotion	visual					The BANC project				
-VS3	VS3 visual_vertical_widefieldmotion	visual					The BANC project				
-VS4	VS4 visual_vertical_widefieldmotion	visual					The BANC project				
-VS5	VS5 visual_vertical_widefieldmotion	visual					The BANC project				
-VS6	VS6 visual_vertical_widefieldmotion	visual					The BANC project				
+VS1	VS1 visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00007517	vertical system neuron 1	
+VS2	VS2 visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00007518	vertical system neuron 2	
+VS3	VS3 visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00007519	vertical system neuron 3	
+VS4	VS4 visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00007520	vertical system neuron 4	
+VS5	VS5 visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00007521	vertical system neuron 5	
+VS6	VS6 visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00007522	vertical system neuron 6	
 VS7	VS7 visual_vertical_widefieldmotion	visual					The BANC project				
 VS8	VS8 visual_vertical_widefieldmotion	visual					The BANC project				
 VSm	VSm visual_vertical_widefieldmotion	visual					The BANC project		FBbt:00053494	vertical system-like neuron VSm	
