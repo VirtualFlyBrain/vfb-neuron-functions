@@ -22,7 +22,7 @@ AN08B043	AN08B043 sine_song; wing_vibration	reproduction		Lillvis et al., 2024	h
 AN08B059	AN08B059 sine_song; wing_vibration	reproduction		Lillvis et al., 2024	https://www.sciencedirect.com/science/article/pii/S0960982224000150		The BANC project	vPR13	FBbt:00053053	adult fruitless vPR13 neuron	parent_term
 AN08B069	AN08B069 sine_song; wing_vibration	reproduction		Lillvis et al., 2024	https://www.sciencedirect.com/science/article/pii/S0960982224000150		The BANC project	vPR13	FBbt:00053053	adult fruitless vPR13 neuron	parent_term
 AN08B134	AN08B134 proboscis_extension	movement		Chen et al., 2023			The BANC project	SS31232			
-AN09B017	AN09B017 pheromone	reproduction		Clowney et al., 2019			The BANC project	vAB3	FBbt:00110852	adult fruitless vAB3 (male) neuron	
+AN09B017	AN09B017 pheromone	reproduction		Clowney et al., 2019			The BANC project	vAB3	FBbt:00052713	adult fruitless vAB3 neuron	
 AN10B001	AN10B001 turning	walking		Chen et al., 2023			The BANC project	SS51046			
 AN10B005	AN10B005 rest			Chen et al., 2023			The BANC project	SS27485	FBbt:20001290	adult inferior bridge neuron 113	
 AN19A018	AN19A018 halting	movement		Sapkal et al., 2024	https://www.nature.com/articles/s41586-024-07854-7		The BANC project	BRK1, BRK2, AN_GNG_53,BRK3, BRK4, AN_GNG_54,BRK5, BRK6, AN_GNG_76	FBbt:20008046	adult AN19A018 neuron	
@@ -31,7 +31,7 @@ AN27X005	AN27X005 walking	movement		Chen et al., 2023			The BANC project	SS29579
 AN27X008	AN27X008 flight_induction	flight		Cheong et al., 2024		neurotransmitter: histamine	The BANC project	MsAHN, AHN, MDHn	FBbt:00052358	adult mesothoracic histaminergic neuron	
 AOTU019	AOTU019 frontal visual field object detection; steer object towards midline; increase forward velocity	visual, reproduction	yes	Collie et al. 2025	https://doi.org/10.1101/2025.04.23.650240		Yijie Yin		FBbt:20000018	adult anterior optic tubercle neuron 019	
 AOTU025	AOTU025 lateral visual field object detection; steer object towards midline	visual, reproduction	yes	Collie et al. 2025	https://doi.org/10.1101/2025.04.23.650240		Yijie Yin		FBbt:20000024	adult anterior optic tubercle neuron 025	
-aSP22	aSP22 courtship behavioural motif	reproduction, movement	yes	McKellar et al. 2019	https://www.cell.com/current-biology/abstract/S0960-9822(18)31651-8		Yijie Yin		FBbt:00051201	descending neuron of the anterior dorsal brain DNa12 (male)	
+aSP22	aSP22 courtship behavioural motif	reproduction, movement	yes	McKellar et al. 2019	https://www.cell.com/current-biology/abstract/S0960-9822(18)31651-8		Yijie Yin		FBbt:00051200	descending neuron of the anterior dorsal brain DNa12	
 CB0041	CB0041 control the length of yeast feeding bursts	feeding	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671815v2		Yijie Yin		FBbt:20003898	adult CB0041 neuron	
 CB0339	CB0339 aversive memory retrieval; innate olfactory approach	olfactory, learning_and_memory	yes	Dolan et al. 2018	https://www.sciencedirect.com/science/article/pii/S0896627318307426		Yijie Yin	LHPD2b1	FBbt:00049371	adult lateral horn PD2b1 neuron	
 CB0726	CB0726 heart; neuromodulatory	neuromodulatory				neuropeptide: Corazonin	The BANC project	I_NSC_CRZ			
@@ -110,7 +110,7 @@ DNa04	DNa04 wing steering	flight		Cheong et al. 2025	https://www.biorxiv.org/con
 DNa05	DNa05 flight saccade	flight	yes	Schnell et al. 2017; Cheong et al. 2024	https://www.cell.com/current-biology/abstract/S0960-9822(17)30273-7; https://elifesciences.org/reviewed-preprints/96084		Yijie Yin		FBbt:20008259	adult DNut037 neuron	
 DNa10	DNa10 wing thrust, lift, pitch	flight		Cheong et al. 2025	https://www.biorxiv.org/content/10.1101/2023.06.07.543976v3		Yijie Yin		FBbt:00047581	descending neuron of the anterior dorsal brain DNa10	
 DNa11	DNa11 rapid saccadic turning; walking	walking	yes	Feng et al 2024	https://www.biorxiv.org/content/10.1101/2024.06.27.601106v1		The BANC project; Yijie Yin		FBbt:20003474	adult vest neuron 008	
-DNa12	DNa12 abdomen_curl; abdomen_motion	reproduction		McKellar et al. 2019	https://www.sciencedirect.com/science/article/pii/S0960982218316518	sexually dimorphic fru+ descending neuron involved in male courtship sequence	The BANC project	aSP22	FBbt:00051201	descending neuron of the anterior dorsal brain DNa12 (male)	
+DNa12	DNa12 abdomen_curl; abdomen_motion	reproduction		McKellar et al. 2019	https://www.sciencedirect.com/science/article/pii/S0960982218316518	sexually dimorphic fru+ descending neuron involved in male courtship sequence	The BANC project	aSP22	FBbt:00051200	descending neuron of the anterior dorsal brain DNa12	
 DNa15	DNa15 turning; flight	flight		Ros et al 2024			The BANC project		FBbt:20011334	descending neuron of the anterior dorsal brain DNa15	
 DNae003	DNae003 turning; walking	walking		Feng et al 2024			The BANC project		FBbt:20001795	adult posterior slope neuron 040	
 DNae014	DNae014 turning or saccade in flight	flight		Ros et al 2024	https://www.cell.com/current-biology/fulltext/S0960-9822(23)01747-5?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0960982223017475%3Fshowall%3Dtrue		Yijie Yin				
@@ -653,7 +653,7 @@ VP5+_l2PN	VP5+_l2PN thermo_hygro; hygrosensory						The BANC project	VP5+_l2PN(t
 VP5+VP2_l2PN	VP5+VP2_l2PN humid_heating	thermosensory, hygrosensory					The BANC project	VP5+VP2_l2PN(t10ALT)			
 VP5+VP3_l2PN	VP5+VP3_l2PN humid_cooling;	thermosensory, hygrosensory					The BANC project	VP5+VP3_l2PN(t10ALT); TPN	FBbt:00049736	adult antennal lobe projection neuron VP5+VP3 l2PN	
 VP5+Z_adPN	VP5+Z_adPN thermo_hygro; hygrosensory						The BANC project	VP5+Z_adPN(uniAL+SEZ)	FBbt:00100374	adult uniglomerular projection neuron VP5+SEZ adPN	
-vPR6	vPR6 mesothoracic, may encode the courtship song inter-pulse-interval			Philipsborn et al. 2011	https://www.cell.com/neuron/fulltext/S0896-6273(11)00057-2		Yijie Yin		FBbt:00110860	adult fruitless vPR6 (male) neuron	
+vPR6	vPR6 mesothoracic, may encode the courtship song inter-pulse-interval			Philipsborn et al. 2011	https://www.cell.com/neuron/fulltext/S0896-6273(11)00057-2		Yijie Yin		FBbt:00052714	adult fruitless vPR6 neuron	
 VS	VS Vertical flow						Michael Reiser; Yijie Yin		FBbt:00007516	vertical system neuron	
 VS1	VS1 visual_vertical_widefieldmotion	visual					The BANC project				
 VS2	VS2 visual_vertical_widefieldmotion	visual					The BANC project				
