@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project maps known Drosophila neuron cell types and their functions to terms in the Drosophila anatomy ontology (FBbt), maintained by [Virtual Fly Brain](https://virtualflybrain.org).
+This project maps known Drosophila neuron cell types to terms in the Drosophila anatomy ontology (FBbt) and their functions to Gene Ontology (GO) Biological Process terms, maintained by [Virtual Fly Brain](https://virtualflybrain.org).
 
 ## What we have done
 
@@ -55,10 +55,33 @@ We resolved the literature references in the `reference` and `link_to_paper` col
 - The 6 unmatched rows have vague references ("classic (70's Roger Hardie work)", "many paper...") that do not identify a specific publication
 - IDs are pipe-separated and prefixed (`PMID:`, `doi:`), e.g. `PMID:31182867|doi:10.1101/2024.06.27.601106`
 
+### Function-to-ontology mapping
+
+We mapped the `known_function` and `category` columns to Gene Ontology (GO) Biological Process terms (preferred) or Neuro Behavior Ontology (NBO) terms (fallback), adding `function_ont_id` and `function_ont_label` columns to `known_types_mapped.tsv`.
+
+#### Approach
+
+1. **Curated dictionary** -- A manually curated mapping of ~330 normalised function terms to ontology terms covers the vast majority of annotations. Terms representing pure molecular markers (e.g. Gr5a, Ir94e) or overly broad descriptors (e.g. "behavior", "neuromodulatory") are excluded.
+
+2. **OLS fallback** -- Any remaining unmapped terms are searched against GO and NBO in the [EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols4/), with word-overlap filtering to avoid spurious matches.
+
+3. **Context-aware overrides** -- Several cell-type-specific adjustments ensure biological accuracy:
+   - **Mushroom body output neurons (MBONs)**: "aversive" is mapped to `associative learning` rather than `olfactory behavior`, since the stimulus modality is not specified in the annotations. MBONs with `learning_and_memory` category receive learning/memory terms.
+   - **Song perception vs production**: pC1a--e (female neurons responding to male courtship song) and JO-A (auditory sensory neurons) are mapped to `sensory perception of sound` rather than male song production terms.
+   - **Sex-specific behavior terms**: Male-specific GO terms (`male courtship behavior, veined wing generated song production`, `male courtship behavior, veined wing vibration`) are only used when the FBbt anatomy term is itself male-specific (e.g. pIP10 (male), P1 (male)). For fruitless neurons without male-specific FBbt subclasses, the sex-neutral parent term `courtship behavior` is used instead.
+   - **Egg-laying on sex-neutral anatomy**: `egg-laying behavior` is not mapped to sex-neutral descending neurons (DNa12, DNg14) or interneurons (SMP550) that lack female-specific FBbt subclasses.
+
+#### Function mapping results
+
+- **651 / 672 rows mapped** (97%)
+- **46 unique ontology terms** used (44 GO, 2 NBO)
+- 21 unmapped rows have no explicit functional information in the annotations
+
 ## Files
 
 | File | Description |
 |------|-------------|
 | `known_types.tsv` | Input: cell types with functional annotations |
-| `known_types_mapped.tsv` | Output: cell types with FBbt mappings and xrefs added |
+| `known_types_mapped.tsv` | Output: cell types with FBbt mappings, xrefs and function ontology terms added |
+| `map_functions.py` | Script to map functions to GO/NBO ontology terms |
 | `resolve_references.py` | Script to resolve references to PubMed IDs and DOIs |
