@@ -372,6 +372,7 @@ def main():
     for row in rows:
         row.pop('xrefs', None)
         row.pop('flags', None)
+        row.pop('', None)
     print(f"Read {len(rows)} rows", file=sys.stderr)
 
     # --- Phase 1: Parse all unique URLs ---
@@ -615,21 +616,9 @@ def main():
 
         row['xrefs'] = '|'.join(xref_ids)
 
-        # Flags: based on ref_parts count (the primary reference list)
-        total_refs = len(ref_parts) if ref_parts else len(link_parts)
-        n_resolved = len(xref_ids)
-        if total_refs == 0:
-            row['flags'] = ''
-        elif n_resolved == 0:
-            row['flags'] = 'unmatched'
-        elif n_resolved < total_refs:
-            row['flags'] = 'partial'
-        else:
-            row['flags'] = ''
-
     # --- Write output ---
     print("\n=== Writing output ===", file=sys.stderr)
-    out_fieldnames = list(fieldnames) + ['xrefs', 'flags']
+    out_fieldnames = list(fieldnames) + ['xrefs']
 
     with open(OUTPUT, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=out_fieldnames, delimiter='\t',
@@ -639,16 +628,8 @@ def main():
 
     # Stats
     has_xrefs = sum(1 for r in rows if r.get('xrefs', '').strip())
-    has_flags = {r.get('flags', '') for r in rows}
-    n_partial = sum(1 for r in rows if r.get('flags') == 'partial')
-    n_unmatched = sum(1 for r in rows if r.get('flags') == 'unmatched')
-    n_clean = sum(1 for r in rows if r.get('xrefs', '').strip() and not r.get('flags', '').strip())
     print(f"\nFinal stats:", file=sys.stderr)
     print(f"  Rows with xrefs: {has_xrefs}/{len(rows)}", file=sys.stderr)
-    print(f"  Fully resolved: {n_clean}", file=sys.stderr)
-    print(f"  Partial: {n_partial}", file=sys.stderr)
-    print(f"  Unmatched: {n_unmatched}", file=sys.stderr)
-    print(f"  No reference: {len(rows) - has_xrefs - n_unmatched}", file=sys.stderr)
 
 
 if __name__ == '__main__':
