@@ -25,6 +25,11 @@ CITATION_OVERRIDES = {
     ('Zacarias', '2021'): '30209268',        # Zacarias et al. (actual pub year 2018)
     ('Erginkaya', '2023'): '37904921',       # Erginkaya et al. 2023
     ('Tuthil', '2013'): '23849200',          # Typo for Tuthill 2013
+    ('Fujiwara', '2020'): '35525243',        # Published 2022, cited as 2020
+    ('Clowney', '2019'): '26279475',         # Published 2015, cited as 2019
+    ('Mollá-Albaladejo', '2024'): '40631860',  # Wrong year in citation
+    ('Sten', '2021'): '34234348',            # Wrong year in citation
+
 }
 
 # Overrides for refs without year (keyed on normalised ref text)

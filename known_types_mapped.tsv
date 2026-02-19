@@ -10,7 +10,7 @@ AN_AVLP_20	AN_AVLP_20 courtship promotion	reproduction	yes	Kallman et al. 2015	h
 AN03A001	AN03A001 walking	movement		Chen et al., 2023			The BANC project	SS42740				PMID:38096817	
 AN05B023	AN05B023 pheromone	reproduction		Kallman et al., 2015			The BANC project	PPN1	FBbt:00111517	adult pheromone projection neuron 1		PMID:26568316	
 AN05B102a	AN05B102a courtship promotion	reproduction	yes	Kallman et al. 2015	https://elifesciences.org/articles/11188		Yijie Yin	PPN1	FBbt:20007772	adult AN05B102 neuron		PMID:26568316	
-AN06B011	AN06B011 stride; walking	movement		Fujiwara et al., 2020			The BANC project	LAL-PS-AN, AN_multi_10	FBbt:00059240	lateral accessory lobe-posterior slope contralateral ascending neuron			unmatched
+AN06B011	AN06B011 stride; walking	movement		Fujiwara et al., 2020			The BANC project	LAL-PS-AN, AN_multi_10	FBbt:00059240	lateral accessory lobe-posterior slope contralateral ascending neuron		PMID:35525243	
 AN07B033	AN07B033 grooming	movement		Chen et al., 2023			The BANC project	SS25469				PMID:38096817	
 AN07B038	AN07B038 grooming	movement		Chen et al., 2023			The BANC project	SS25469				PMID:38096817	
 AN07B043	AN07B043 grooming	movement		Chen et al., 2023			The BANC project	SS25469	FBbt:20007836	adult AN07B043 neuron		PMID:38096817	
@@ -22,7 +22,7 @@ AN08B043	AN08B043 sine_song; wing_vibration	reproduction		Lillvis et al., 2024	h
 AN08B059	AN08B059 sine_song; wing_vibration	reproduction		Lillvis et al., 2024	https://www.sciencedirect.com/science/article/pii/S0960982224000150		The BANC project	vPR13	FBbt:00053053	adult fruitless vPR13 neuron	parent_term	PMID:38295797	
 AN08B069	AN08B069 sine_song; wing_vibration	reproduction		Lillvis et al., 2024	https://www.sciencedirect.com/science/article/pii/S0960982224000150		The BANC project	vPR13	FBbt:00053053	adult fruitless vPR13 neuron	parent_term	PMID:38295797	
 AN08B134	AN08B134 proboscis_extension	movement		Chen et al., 2023			The BANC project	SS31232				PMID:38096817	
-AN09B017	AN09B017 pheromone	reproduction		Clowney et al., 2019			The BANC project	vAB3	FBbt:00052713	adult fruitless vAB3 neuron			unmatched
+AN09B017	AN09B017 pheromone	reproduction		Clowney et al., 2019			The BANC project	vAB3	FBbt:00052713	adult fruitless vAB3 neuron		PMID:26279475	
 AN10B001	AN10B001 turning	walking		Chen et al., 2023			The BANC project	SS51046				PMID:38096817	
 AN10B005	AN10B005 rest			Chen et al., 2023			The BANC project	SS27485	FBbt:20001290	adult inferior bridge neuron 113		PMID:38096817	
 AN19A018	AN19A018 halting	movement		Sapkal et al., 2024	https://www.nature.com/articles/s41586-024-07854-7		The BANC project	BRK1, BRK2, AN_GNG_53,BRK3, BRK4, AN_GNG_54,BRK5, BRK6, AN_GNG_76	FBbt:20008046	adult AN19A018 neuron		PMID:39358520	
@@ -137,7 +137,7 @@ DNg34	DNg34 neuromodulatory	neuromodulatory		Certel et al., 2010, Babski et al.,
 DNg55	DNg55 walking	walking		Sapkal et al. 2024 (downstream BPNs)	https://www.nature.com/articles/s41586-024-07854-7		The BANC project	BDN3	FBbt:20007500	descending neuron of the gnathal ganglion DNg55		PMID:39358520	
 DNg62	DNg62 antennal_grooming	grooming		Braun et al. 2024, Hampel et al 2015			The BANC project	aDN1	FBbt:00111647	antennal grooming descending neuron 1		PMID:39282309|PMID:26344548	
 DNg66	DNg66 neuromodulatory	neuromodulatory		Babski et al., 2024		neurotransmitter: octopamine	The BANC project	OA-VUMd4	FBbt:00110330	octopaminergic VUMd4 neuron		PMID:38698992	
-DNg70	DNg70 neuromodulatory	neuromodulatory		Mollá-Albaladejo et al., 2024 (scRNA-seq, unsure)		neuropeptide: leucokinin	The BANC project		FBbt:20007673	descending neuron of the gnathal ganglion DNg70			unmatched
+DNg70	DNg70 neuromodulatory	neuromodulatory		Mollá-Albaladejo et al., 2024 (scRNA-seq, unsure)		neuropeptide: leucokinin	The BANC project		FBbt:20007673	descending neuron of the gnathal ganglion DNg70		PMID:40631860	
 DNg75	DNg75 forward; walking	walking		Sapkal et al. 2024	https://www.nature.com/articles/s41586-024-07854-7	RW: this DN is also positioned to influence antennal motor neurons and neck motor neurons	The BANC project	cDN1	FBbt:20007514	descending neuron of the gnathal ganglion DNg75		PMID:39358520	
 DNg97	DNg97 forward; walking	walking		Sapkal et al. 2024	https://www.nature.com/articles/s41586-024-07854-7		The BANC project	oDN1	FBbt:20007470	descending neuron of the gnathal ganglion DNg97		PMID:39358520	
 DNge011	DNge011 antennal_grooming	grooming		Hampel et al 2015		putative aDN1 (by morphology and JO-F output)	The BANC project	aDN1	FBbt:20007323	descending neuron of the gnathal ganglion DNge011		PMID:26344548	
@@ -246,7 +246,7 @@ LB3a	LB3a labellar bristle gustatory receptor neuron; ppk28; appetitive; water-s
 LB3b	LB3b Gr64f; Ir56b; labellar bristle gustatory receptor neuron; sweet-sensing	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2.full.pdf+html		Yijie Yin					PMID:40909552|doi:10.1101/2025.08.25.671814	
 LB3c	LB3c Gr64f sweet-sensing labellar bristle gustatory receptor neuron	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2.full.pdf+html		Yijie Yin					PMID:40909552|doi:10.1101/2025.08.25.671814	
 LB3d	LB3d glutamatergic Ir7c; ppk23; Ir47a; high salt avoidance labellar bristle gustatory receptor neuron	gustatory	yes	Tastekin et al. 2025	https://www.biorxiv.org/content/10.1101/2025.08.25.671814v2.full.pdf+html		Yijie Yin					PMID:40909552|doi:10.1101/2025.08.25.671814	
-LC10a	LC10a visual_small_object; courtship; visual	reproduction, visual		Ribeiro et al 2018, Sten et al 2021	https://www.sciencedirect.com/science/article/pii/S0092867418307888?via%3Dihub		The BANC project		FBbt:00111747	lobula columnar neuron LC10a		PMID:30033367	partial
+LC10a	LC10a visual_small_object; courtship; visual	reproduction, visual		Ribeiro et al 2018, Sten et al 2021	https://www.sciencedirect.com/science/article/pii/S0092867418307888?via%3Dihub		The BANC project		FBbt:00111747	lobula columnar neuron LC10a		PMID:30033367|PMID:34234348	
 LC10b	LC10b visual_small_object	visual		Ribeiro et al. 2018	https://pubmed.ncbi.nlm.nih.gov/30033367/	[AB] Under the assumption that all LC10 cells have similar responses - HHY	Michael Reiser; Yijie Yin; Alexander Bates		FBbt:00111745	lobula columnar neuron LC10b		PMID:30033367	
 LC10c	LC10c visual_small_object	visual		Ribeiro et al 2018,	https://www.sciencedirect.com/science/article/pii/S0092867418307888?via%3Dihub	Under the assumption that all LC10 cells have similar responses - HHY	The BANC project		FBbt:00111746	lobula columnar neuron LC10c		PMID:30033367	
 LC10d	LC10d visual_small_object	visual		Ribeiro et al 2018,	https://www.sciencedirect.com/science/article/pii/S0092867418307888?via%3Dihub	Under the assumption that all LC10 cells have similar responses - HHY	The BANC project		FBbt:00111748	lobula columnar neuron LC10d		PMID:30033367	
