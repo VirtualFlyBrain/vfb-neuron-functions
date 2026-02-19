@@ -32,9 +32,33 @@ We mapped these cell types to FBbt ontology terms, producing `known_types_mapped
 - **106 types unmapped** -- these are mostly BANC-specific names for which no FBbt term currently exists (e.g. SApp, SA_VTV, PhG, LB, LgLG subtypes, DProN, putative types)
 - Where a mapping is to a parent class rather than an exact type match, `specificity` is set to `parent_term`
 
+### Reference resolution
+
+We resolved the literature references in the `reference` and `link_to_paper` columns to PubMed IDs and DOIs, adding an `xrefs` column to `known_types_mapped.tsv`.
+
+#### Approach
+
+1. **URL parsing** -- Extracted identifiers directly from `link_to_paper` URLs:
+   - PubMed and PMC links → PMIDs
+   - DOI links (doi.org, bioRxiv, Nature, eLife, PLOS, Frontiers, Wiley, SAGE, PNAS) → DOIs
+   - Cell Press and ScienceDirect URLs → PIIs (Publisher Item Identifiers)
+
+2. **ID conversion** -- Batch-converted extracted DOIs, PMC IDs, and PIIs to PMIDs using the NCBI ID Converter API and PubMed E-utilities. DOIs that could not be converted (mostly bioRxiv preprints without a published journal version) were retained as `doi:` entries.
+
+3. **Citation search** -- For references given only as text (e.g. "Ache et al. 2019"), parsed author surname and year and searched PubMed by first author and publication date. Manual overrides were added for edge cases such as typos, first-name-as-author, "von" prefixes, and preprint years differing from publication years.
+
+#### Reference resolution results
+
+- **511 / 517 rows with references resolved** (99%)
+- **509 fully resolved**, 2 partially resolved, 6 unmatched
+- **169 unique PMIDs**, 25 unique DOIs (no PMID available)
+- The 6 unmatched rows have vague references ("classic (70's Roger Hardie work)", "many paper...") that do not identify a specific publication
+- IDs are pipe-separated and prefixed (`PMID:`, `doi:`), e.g. `PMID:31182867|doi:10.1101/2024.06.27.601106`
+
 ## Files
 
 | File | Description |
 |------|-------------|
 | `known_types.tsv` | Input: cell types with functional annotations |
-| `known_types_mapped.tsv` | Output: cell types with FBbt mappings added |
+| `known_types_mapped.tsv` | Output: cell types with FBbt mappings and xrefs added |
+| `resolve_references.py` | Script to resolve references to PubMed IDs and DOIs |
