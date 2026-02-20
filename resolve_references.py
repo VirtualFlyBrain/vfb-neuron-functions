@@ -29,6 +29,25 @@ CITATION_OVERRIDES = {
     ('Clowney', '2019'): '26279475',         # Published 2015, cited as 2019
     ('Mollá-Albaladejo', '2024'): '40631860',  # Wrong year in citation
     ('Sten', '2021'): '34234348',            # Wrong year in citation
+    # Fixes for wrong PMIDs found during abstract verification:
+    ('Zhao', '2024'): '37904921',            # Same paper as Erginkaya et al. 2023
+    ('Wang', '2020'): '32103180',            # Neural circuitry linking mating and egg laying
+    ('Chen', '2023'): '36959417',            # Ascending neurons convey behavioral state
+    ('Braun', '2024'): '38839968',           # Descending networks transform command signals
+    ('Wei', '2020'): '31709462',             # Diversity of lobula plate tangential cells
+    ('Hardcastle', '2021'): '33755020',      # Visual pathway for skylight polarization
+    ('Yang', '2009'): '19249273',            # Postmating behavioral switch sex peptide
+    ('Jiang', '2013'): '23980168',           # Natalisin tachykinin-like signaling
+    ('Feng', '2014'): '24991958',            # Ascending SAG neurons sexual receptivity
+    ('Wang', '2021'): '33239786',            # Neural circuit mechanisms sexual receptivity
+    ('Yao', '2022'): '35051377',             # Serotonergic neurons taste/nutrient regulation
+    ('Li', '2021'): '34033749',              # Spatio-chromatic opponency Dm8 amacrine
+    ('Ros', '2024'): '38228148',             # Descending control spontaneous flight turns
+    ('Feng', '2024'): None,                  # bioRxiv preprint, no PMID
+    ('Song', '2023'): '37055592',            # FMRFamide signaling Drosophila
+    ('Chen', '2015'): '25600008',            # Orcokinin expression in Drosophila
+    ('Brown', '2024'): '38723636',           # Evening cells arousal-to-sleep switch
+    ('Carlsson', '2010'): '20575072',        # Neuropeptides in antennal lobe (keep, medium conf)
 
 }
 
@@ -541,7 +560,10 @@ def main():
         if (author, year) in CITATION_OVERRIDES:
             pmid = CITATION_OVERRIDES[(author, year)]
             citation_cache[(author, year)] = pmid
-            print(f"  {author} {year} → PMID:{pmid} (override)", file=sys.stderr)
+            if pmid:
+                print(f"  {author} {year} → PMID:{pmid} (override)", file=sys.stderr)
+            else:
+                print(f"  {author} {year} → no PMID (override: not in PubMed)", file=sys.stderr)
             continue
         pmid = search_pmid_by_citation(author, year)
         citation_cache[(author, year)] = pmid
