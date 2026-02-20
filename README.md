@@ -80,6 +80,30 @@ We mapped the `known_function` and `category` columns to Gene Ontology (GO) Biol
 - **46 unique ontology terms** used (44 GO, 2 NBO)
 - 21 unmapped rows have no explicit functional information in the annotations
 
+### OWL ontology generation
+
+We generated an OWL ontology (`vfb-neuron-functions.owl`) asserting "capable of part of" (`RO:0002216`) relationships between neuron classes and function classes, with literature references as axiom annotations.
+
+#### Approach
+
+1. **Template generation** -- `generate_robot_template.py` reads `known_types_mapped.tsv`, filters to the 419 rows where FBbt_id, function_ont_id, and xrefs are all present, and expands multi-function rows (pipe-separated function_ont_id values) into one template row per (FBbt, function) pair. This produces `robot_template.tsv` with 553 data rows.
+
+2. **ROBOT build** -- The template is processed with [ROBOT](https://robot.obolibrary.org/) to produce the OWL file. Each data row creates a SubClassOf axiom of the form `FBbt:X SubClassOf RO:0002216 some GO:Y`, annotated with `oboInOwl:hasDbXref` values (one per literature reference) and an `rdfs:comment` noting provenance.
+
+#### Build commands
+
+```bash
+python generate_robot_template.py
+robot template --template robot_template.tsv \
+  --prefix "FBbt: http://purl.obolibrary.org/obo/FBbt_" \
+  --prefix "GO: http://purl.obolibrary.org/obo/GO_" \
+  --prefix "NBO: http://purl.obolibrary.org/obo/NBO_" \
+  --prefix "RO: http://purl.obolibrary.org/obo/RO_" \
+  --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" \
+  annotate --ontology-iri "http://virtualflybrain.org/data/VFB/OWL/vfb-neuron-functions.owl" \
+  --output vfb-neuron-functions.owl
+```
+
 ## Files
 
 | File | Description |
@@ -88,3 +112,6 @@ We mapped the `known_function` and `category` columns to Gene Ontology (GO) Biol
 | `known_types_mapped.tsv` | Output: cell types with FBbt mappings, xrefs and function ontology terms added |
 | `map_functions.py` | Script to map functions to GO/NBO ontology terms |
 | `resolve_references.py` | Script to resolve references to PubMed IDs and DOIs |
+| `generate_robot_template.py` | Script to generate ROBOT template from mapped data |
+| `robot_template.tsv` | Generated ROBOT template (553 data rows) |
+| `vfb-neuron-functions.owl` | Generated OWL ontology with neuron-function axioms |
