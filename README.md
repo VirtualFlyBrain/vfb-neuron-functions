@@ -49,11 +49,14 @@ We resolved the literature references in the `reference` and `link_to_paper` col
 
 #### Reference resolution results
 
-- **511 / 517 rows with references resolved** (99%)
-- **509 fully resolved**, 2 partially resolved, 6 unmatched
+- **510 / 517 rows with references resolved** (99%)
 - **169 unique PMIDs**, 25 unique DOIs (no PMID available)
-- The 6 unmatched rows have vague references ("classic (70's Roger Hardie work)", "many paper...") that do not identify a specific publication
+- The unmatched rows have vague references ("classic (70's Roger Hardie work)", "many paper...") that do not identify a specific publication
 - IDs are pipe-separated and prefixed (`PMID:`, `doi:`), e.g. `PMID:31182867|doi:10.1101/2024.06.27.601106`
+
+#### Reference validation
+
+For the 127 rows where references were resolved from citation text alone (no URL), we fetched article abstracts from PubMed and assessed whether each paper plausibly studied the annotated cell types and functions. This identified 18 incorrect PMIDs where the automated citation search had matched unrelated papers (e.g. "Wang et al 2020" matching a neural network model paper instead of the oviposition circuits paper). All 18 were corrected by adding manual overrides in `resolve_references.py` with the correct PMIDs, found by targeted PubMed searches using author names, years, and topic-specific keywords. All corrected mappings were verified against the paper abstracts.
 
 ### Function-to-ontology mapping
 
