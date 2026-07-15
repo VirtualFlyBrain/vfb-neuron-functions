@@ -9,9 +9,11 @@ import sys
 import urllib.request
 import urllib.parse
 from collections import OrderedDict
+from pathlib import Path
 
-INPUT = 'known_types_mapped.tsv'
-OUTPUT = 'known_types_mapped.tsv'
+ROOT = Path(__file__).resolve().parent.parent
+INPUT = str(ROOT / 'neuron_functions.tsv')
+OUTPUT = str(ROOT / 'neuron_functions.tsv')
 
 # Manual citation overrides: (author_as_parsed, year) → PMID
 # For cases where the author name in the reference doesn't match PubMed's first-author
@@ -582,8 +584,12 @@ def main():
         refs_raw = row.get('reference', '').strip()
         links_raw = row.get('link_to_paper', '').strip()
 
+        # extra_xrefs: literal xrefs attached by a source adapter (e.g. the
+        # BANC paper DOI on every BANC-sourced annotation). Always kept verbatim.
+        extra_xrefs = [x.strip() for x in (row.get('extra_xrefs', '') or '').split('|') if x.strip()]
+
         if not refs_raw and not links_raw:
-            row['xrefs'] = ''
+            row['xrefs'] = '|'.join(extra_xrefs)
             row['flags'] = ''
             continue
 
@@ -635,6 +641,12 @@ def main():
                 if xref not in seen_ids:
                     xref_ids.append(xref)
                     seen_ids.add(xref)
+
+        # Append any literal extra_xrefs (verbatim, deduped)
+        for xref in extra_xrefs:
+            if xref not in seen_ids:
+                xref_ids.append(xref)
+                seen_ids.add(xref)
 
         row['xrefs'] = '|'.join(xref_ids)
 

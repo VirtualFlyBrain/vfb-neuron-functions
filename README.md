@@ -2,98 +2,75 @@
 
 ## Overview
 
-This project maps known Drosophila neuron cell types to terms in the Drosophila anatomy ontology (FBbt) and their functions to Gene Ontology (GO) Biological Process terms, maintained by [Virtual Fly Brain](https://virtualflybrain.org).
+This project maps known *Drosophila* neuron cell types to terms in the Drosophila anatomy ontology (FBbt) and their functions to Gene Ontology (GO) Biological Process terms, maintained by [Virtual Fly Brain](https://virtualflybrain.org).
 
-## What we have done
+Annotations are drawn from one or more **source files** (in `sources/`), merged into a single working file `neuron_functions.tsv`, enriched with FBbt anatomy mappings, resolved literature references and function-ontology terms, and finally exported as an OWL ontology.
 
-The input file `known_types.tsv` contains 672 cell types with annotations of known functions, categories, experimental evidence and references, primarily from the BANC (Brain And Nerve Cord) connectome project.
+## Repository layout
 
-We mapped these cell types to FBbt ontology terms, producing `known_types_mapped.tsv` with three additional columns: `FBbt_id`, `FBbt_name`, and `specificity`.
+```
+sources/                        annotation source files (never modified in place)
+  known_types.tsv                 legacy set of ~670 cell types with functions
+  BANC_function_supplement.tsv    BANC connectome function annotations (preferred)
+resources/
+  all_male-cns_FBbt.tsv           cached FBbt curation table (git-ignored; see below)
+  fbbt_overrides.tsv              curated FBbt mappings that override the table
+scripts/
+  merge_sources.py                stage 1: merge sources -> neuron_functions.tsv
+  map_fbbt.py                     stage 2: fill FBbt anatomy mappings
+  resolve_references.py           stage 3: resolve references -> xrefs
+  map_functions.py                stage 4: map functions -> GO/NBO
+  generate_robot_template.py      stage 5: build the ROBOT template
+neuron_functions.tsv            merged, enriched working file (basis for the OWL)
+robot_template.tsv              generated ROBOT template
+vfb-neuron-functions.owl        generated OWL ontology
+```
 
-### Mapping approach
+## Sources and precedence
 
-1. **Existing curated mappings** -- The majority of matches (542) came from an existing curated mapping file (`all_male-cns_FBbt.tsv` from the male-cns_curation project), matching on cell type name, FlyWire type, hemibrain type, MANC type and synonyms.
+Annotations come from the files in `sources/`, combined by `merge_sources.py`. Each
+source has a **priority** (lower = preferred); for a given neuron the most-preferred
+source that lists it supplies the *function annotation and its references*, while
+*context fields* such as `category` fall back to lower-priority sources.
 
-2. **OLS ontology search** -- Remaining unmatched types were searched against FBbt in the [EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols4/). This added a further 24 matches, including:
-   - Johnston's organ neuron subtypes (JO-C, JO-DA, JO-EVM, etc.)
-   - Vertical system neurons (VS1--VS6)
-   - Oviposition descending neurons (oviDNa, oviDNb)
-   - Doublesex pC1 neurons (pC1a--pC1e)
-   - Lateral horn neuron types (LHAD, LHAV, LHPV subtypes)
-   - Neck motor neurons (CvN1--CvN8, CvN_A1, CvN_A2, VCvN)
-   - Crop-innervating enteric motor neuron (CEM)
-   - Circular muscle of uterus motor neuron (CMU)
-   - Protocerebral bridge--ellipsoid body--nodulus neurons (PEN)
-   - Dopaminergic PAM neurons, lobula plate tangential neurons (FD1, FD3), and others
+| Source | Priority | Notes |
+|--------|----------|-------|
+| `BANC_function_supplement.tsv` | 0 (preferred) | Companion data to the BANC connectome paper; 161 cell types |
+| `known_types.tsv` | 100 | Legacy set; used for any neuron not in the BANC file |
 
-### Mapping results
+So a neuron present in the BANC supplement takes its function and references from
+BANC; `known_types` is used only where a neuron is absent from BANC. Every
+BANC-sourced annotation additionally carries the BANC paper DOI
+(`doi:10.1038/s41586-026-10735-w`) as a reference, in addition to the file's own
+citations.
 
-- **566 / 672 types mapped (84%)**
-- **106 types unmapped** -- these are mostly BANC-specific names for which no FBbt term currently exists (e.g. SApp, SA_VTV, PhG, LB, LgLG subtypes, DProN, putative types)
-- Where a mapping is to a parent class rather than an exact type match, `specificity` is set to `parent_term`
+An `annotation_source` column in `neuron_functions.tsv` records which source won for
+each row.
 
-### Reference resolution
+### Adding a new source
 
-We resolved the literature references in the `reference` and `link_to_paper` columns to PubMed IDs and DOIs, adding an `xrefs` column to `known_types_mapped.tsv`.
+The merge is built around a per-source **adapter**. To add a source:
 
-#### Approach
+1. Add the file to `sources/` (leave it unmodified — loaders do any cleaning).
+2. Write a `load_<name>(path)` function in `merge_sources.py` that reads the file
+   and yields records in the canonical schema (`CANONICAL_FIELDS`), handling that
+   file's particular column names and conventions. Set `extra_xrefs` for any
+   reference that should always be attached (e.g. an accompanying paper DOI).
+3. Add an entry to `SOURCES` with a `priority`.
 
-1. **URL parsing** -- Extracted identifiers directly from `link_to_paper` URLs:
-   - PubMed and PMC links → PMIDs
-   - DOI links (doi.org, bioRxiv, Nature, eLife, PLOS, Frontiers, Wiley, SAGE, PNAS) → DOIs
-   - Cell Press and ScienceDirect URLs → PIIs (Publisher Item Identifiers)
+Nothing else changes: the FBbt, reference and function stages operate on the merged
+file regardless of where each row came from.
 
-2. **ID conversion** -- Batch-converted extracted DOIs, PMC IDs, and PIIs to PMIDs using the NCBI ID Converter API and PubMed E-utilities. DOIs that could not be converted (mostly bioRxiv preprints without a published journal version) were retained as `doi:` entries.
+## Pipeline
 
-3. **Citation search** -- For references given only as text (e.g. "Ache et al. 2019"), parsed author surname and year and searched PubMed by first author and publication date. Manual overrides were added for edge cases such as typos, first-name-as-author, "von" prefixes, and preprint years differing from publication years.
-
-#### Reference resolution results
-
-- **510 / 517 rows with references resolved** (99%)
-- **169 unique PMIDs**, 25 unique DOIs (no PMID available)
-- The unmatched rows have vague references ("classic (70's Roger Hardie work)", "many paper...") that do not identify a specific publication
-- IDs are pipe-separated and prefixed (`PMID:`, `doi:`), e.g. `PMID:31182867|doi:10.1101/2024.06.27.601106`
-
-#### Reference validation
-
-For the 127 rows where references were resolved from citation text alone (no URL), we fetched article abstracts from PubMed and assessed whether each paper plausibly studied the annotated cell types and functions. This identified 18 incorrect PMIDs where the automated citation search had matched unrelated papers (e.g. "Wang et al 2020" matching a neural network model paper instead of the oviposition circuits paper). All 18 were corrected by adding manual overrides in `resolve_references.py` with the correct PMIDs, found by targeted PubMed searches using author names, years, and topic-specific keywords. All corrected mappings were verified against the paper abstracts.
-
-### Function-to-ontology mapping
-
-We mapped the `known_function` and `category` columns to Gene Ontology (GO) Biological Process terms (preferred) or Neuro Behavior Ontology (NBO) terms (fallback), adding `function_ont_id` and `function_ont_label` columns to `known_types_mapped.tsv`.
-
-#### Approach
-
-1. **Curated dictionary** -- A manually curated mapping of ~330 normalised function terms to ontology terms covers the vast majority of annotations. Terms representing pure molecular markers (e.g. Gr5a, Ir94e) or overly broad descriptors (e.g. "behavior", "neuromodulatory") are excluded.
-
-2. **OLS fallback** -- Any remaining unmapped terms are searched against GO and NBO in the [EMBL-EBI Ontology Lookup Service](https://www.ebi.ac.uk/ols4/), with word-overlap filtering to avoid spurious matches.
-
-3. **Context-aware overrides** -- Several cell-type-specific adjustments ensure biological accuracy:
-   - **Mushroom body output neurons (MBONs)**: "aversive" is mapped to `associative learning` rather than `olfactory behavior`, since the stimulus modality is not specified in the annotations. MBONs with `learning_and_memory` category receive learning/memory terms.
-   - **Song perception vs production**: pC1a--e (female neurons responding to male courtship song) and JO-A (auditory sensory neurons) are mapped to `sensory perception of sound` rather than male song production terms.
-   - **Sex-specific behavior terms**: Male-specific GO terms (`male courtship behavior, veined wing generated song production`, `male courtship behavior, veined wing vibration`) are only used when the FBbt anatomy term is itself male-specific (e.g. pIP10 (male), P1 (male)). For fruitless neurons without male-specific FBbt subclasses, the sex-neutral parent term `courtship behavior` is used instead.
-   - **Egg-laying on sex-neutral anatomy**: `egg-laying behavior` is not mapped to sex-neutral descending neurons (DNa12, DNg14) or interneurons (SMP550) that lack female-specific FBbt subclasses.
-
-#### Function mapping results
-
-- **651 / 672 rows mapped** (97%)
-- **46 unique ontology terms** used (44 GO, 2 NBO)
-- 21 unmapped rows have no explicit functional information in the annotations
-
-### OWL ontology generation
-
-We generated an OWL ontology (`vfb-neuron-functions.owl`) asserting "capable of part of" (`RO:0002216`) relationships between neuron classes and function classes, with literature references as axiom annotations.
-
-#### Approach
-
-1. **Template generation** -- `generate_robot_template.py` reads `known_types_mapped.tsv`, filters to the 419 rows where FBbt_id, function_ont_id, and xrefs are all present, and expands multi-function rows (pipe-separated function_ont_id values) into one template row per (FBbt, function) pair. This produces `robot_template.tsv` with 553 data rows.
-
-2. **ROBOT build** -- The template is processed with [ROBOT](https://robot.obolibrary.org/) to produce the OWL file. Each data row creates a SubClassOf axiom of the form `FBbt:X SubClassOf RO:0002216 some GO:Y`, annotated with `oboInOwl:hasDbXref` values (one per literature reference) and an `rdfs:comment` noting provenance.
-
-#### Build commands
+Run from the repository root, in order:
 
 ```bash
-python generate_robot_template.py
+python scripts/merge_sources.py            # sources/ -> neuron_functions.tsv
+python scripts/map_fbbt.py                 # add FBbt_id / FBbt_name / specificity
+python scripts/resolve_references.py       # add xrefs
+python scripts/map_functions.py            # add function_ont_id / function_ont_label
+python scripts/generate_robot_template.py  # -> robot_template.tsv
 robot template --template robot_template.tsv \
   --prefix "FBbt: http://purl.obolibrary.org/obo/FBbt_" \
   --prefix "GO: http://purl.obolibrary.org/obo/GO_" \
@@ -104,14 +81,100 @@ robot template --template robot_template.tsv \
   --output vfb-neuron-functions.owl
 ```
 
+`merge_sources.py`, `resolve_references.py`, `map_functions.py` and `map_fbbt.py`
+each rebuild their own output columns on every run, so the pipeline is
+re-runnable; `neuron_functions.tsv` accumulates the results.
+
+## Stage 1 — Merge (`merge_sources.py`)
+
+Combines the source files into `neuron_functions.tsv` (690 rows: 161 from BANC,
+529 from `known_types`), preferring BANC for shared neurons and appending BANC-only
+cell types. Duplicate cell types in a source (which can legitimately carry different
+references) are preserved. The `known_types` loader strips the cell-type name that
+prefixes its `known_function` values (e.g. "PAM01 appetitive_learning" →
+"appetitive_learning"). FBbt anatomy mappings already present are carried over.
+
+## Stage 2 — FBbt anatomy mapping (`map_fbbt.py`)
+
+FBbt mappings are not produced by the annotation pipeline. The bulk were curated in
+the [male-cns_curation](https://github.com/VirtualFlyBrain/male-cns_curation) project
+(`resources/all_male-cns_FBbt.tsv`), with some added via OLS lookup. This script
+re-attempts **every** row that lacks a valid FBbt mapping on each run (so cell types
+gain mappings as new FBbt terms are published), matching cell-type names and aliases
+against the male-cns table (single, clean FBbt CURIEs only) and falling back to a
+conservative OLS search. Already-mapped rows are left untouched, except that
+curated entries in `resources/fbbt_overrides.tsv` are force-applied last (they win
+over both the carried-over value and the male-cns table). Use the overrides file for
+deliberate curation decisions — e.g. fixing an obsoleted term, refining a generic
+term to a subtype, or correcting a mis-mapping — that should hold even when the
+male-cns table disagrees.
+
+When the male-cns table is updated at source, re-fetch it (delete the cached copy or
+let `map_fbbt.py` fetch it) and review the differences: newly-covered blanks are
+filled automatically, but changes to already-mapped rows are **not** applied
+automatically. Note that the male-cns table is male-specific by construction, so it
+will map sexually dimorphic neurons (e.g. `pC1a`, `vAB3`) to male terms; this dataset
+keeps the curated female/sex-neutral mappings where appropriate, and pins genuine
+improvements (obsolete-term fixes, subtype refinements) via the overrides file.
+
+- **630 / 690 mapped**
+- **60 unmapped** — BANC-specific connectome IDs and putative types with no FBbt
+  term (e.g. `AN09B018_a`–`d`, `SA_VTV_*`, `LgLG*`, `SApp*`, `DProN*`); these stay
+  in `neuron_functions.tsv` with their annotations but are excluded from the OWL.
+
+`resources/all_male-cns_FBbt.tsv` comes from a private VFB repository and is **not
+committed** (it is git-ignored). If it is absent, `map_fbbt.py` tries to fetch it
+with the GitHub CLI (`gh`); otherwise it uses the OLS fallback only.
+
+## Stage 3 — Reference resolution (`resolve_references.py`)
+
+Resolves the `reference` and `link_to_paper` columns to PubMed IDs and DOIs, writing
+a pipe-separated, prefixed `xrefs` column (e.g.
+`PMID:31182867|doi:10.1101/2024.06.27.601106`). URLs and DOIs are parsed directly;
+free-text citations are matched against PubMed by first author and year, with manual
+overrides for edge cases. Any `extra_xrefs` set by a source adapter (such as the BANC
+paper DOI) are appended verbatim.
+
+- **529 rows resolved**, **157 unique PMIDs**, **46 unique DOIs** (including the BANC
+  paper DOI).
+
+## Stage 4 — Function-to-ontology mapping (`map_functions.py`)
+
+Maps `known_function`/`category` to GO Biological Process terms (preferred) or NBO
+terms (fallback), adding `function_ont_id` and `function_ont_label`. A curated
+dictionary of normalised function terms covers the majority; remaining terms are
+searched in OLS with word-overlap filtering. Pure molecular markers and overly broad
+descriptors (e.g. `neuromodulatory`, `octopaminergic`) are intentionally excluded.
+Context-aware overrides keep biologically accurate (e.g. MBON "aversive" →
+associative learning; song-*perception* neurons → sensory perception of sound;
+male-specific GO terms only on male-specific FBbt anatomy).
+
+- **667 / 690 rows mapped**, **47 unique ontology terms** (44 GO, 3 NBO).
+- 23 rows have no explicit functional information.
+
+## Stage 5 — OWL generation (`generate_robot_template.py` + ROBOT)
+
+`generate_robot_template.py` filters to the **465 rows** where FBbt_id,
+function_ont_id and xrefs are all present, expands pipe-separated functions into one
+row per (FBbt, function) pair (validating that both are clean CURIEs), and writes
+`robot_template.tsv` (578 data rows). ROBOT builds the OWL, asserting for each row
+`FBbt:X SubClassOf RO:0002216 ('capable of part of') some GO:Y`, annotated with the
+literature references (`oboInOwl:hasDbXref`) and a provenance `rdfs:comment`.
+
+- **499 `capable of part of` axioms**; 131 carry the BANC paper DOI.
+
 ## Files
 
 | File | Description |
 |------|-------------|
-| `known_types.tsv` | Input: cell types with functional annotations |
-| `known_types_mapped.tsv` | Output: cell types with FBbt mappings, xrefs and function ontology terms added |
-| `map_functions.py` | Script to map functions to GO/NBO ontology terms |
-| `resolve_references.py` | Script to resolve references to PubMed IDs and DOIs |
-| `generate_robot_template.py` | Script to generate ROBOT template from mapped data |
-| `robot_template.tsv` | Generated ROBOT template (553 data rows) |
+| `sources/known_types.tsv` | Legacy cell types with functional annotations |
+| `sources/BANC_function_supplement.tsv` | Preferred BANC connectome function annotations |
+| `neuron_functions.tsv` | Merged, enriched working file (basis for the OWL) |
+| `scripts/merge_sources.py` | Merge source files, preferring higher-priority sources |
+| `scripts/map_fbbt.py` | Fill FBbt anatomy mappings from the male-cns table + OLS |
+| `resources/fbbt_overrides.tsv` | Curated FBbt mappings force-applied by `map_fbbt.py` |
+| `scripts/resolve_references.py` | Resolve references to PubMed IDs and DOIs |
+| `scripts/map_functions.py` | Map functions to GO/NBO ontology terms |
+| `scripts/generate_robot_template.py` | Generate the ROBOT template |
+| `robot_template.tsv` | Generated ROBOT template |
 | `vfb-neuron-functions.owl` | Generated OWL ontology with neuron-function axioms |

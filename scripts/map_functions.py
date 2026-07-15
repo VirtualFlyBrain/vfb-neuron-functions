@@ -8,9 +8,11 @@ import sys
 import time
 import urllib.request
 import urllib.parse
+from pathlib import Path
 
-INPUT = 'known_types_mapped.tsv'
-OUTPUT = 'known_types_mapped.tsv'
+ROOT = Path(__file__).resolve().parent.parent
+INPUT = str(ROOT / 'neuron_functions.tsv')
+OUTPUT = str(ROOT / 'neuron_functions.tsv')
 
 # --- Curated mapping: normalised function term → (ontology_id, label) ---
 # GO Biological Process preferred; NBO as fallback.
@@ -264,6 +266,13 @@ FUNCTION_MAP = {
     'contraversive steering': ('GO:0007629', 'flight behavior'),
     'low gain steering': ('GO:0007629', 'flight behavior'),
     'high gain steering': ('GO:0007629', 'flight behavior'),
+
+    # === BANC supplement (BANC_function_supplement.tsv) ===
+    # Bare "steering" applies to both walking and flight DNs, so use the
+    # generic locomotory term rather than flight-specific.
+    'steering': ('GO:0008344', 'adult locomotory behavior'),
+    'threat_response': ('GO:0002209', 'behavioral defense response'),
+    'visual_front_leg_feedback': ('GO:0007632', 'visual behavior'),
 
     # === Escape ===
     'freezing': ('NBO:0040003', 'escape behavior'),

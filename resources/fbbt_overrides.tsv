@@ -1,0 +1,10 @@
+cell_type	FBbt_id	FBbt_name	specificity	note
+Dm8a	FBbt:00053638	distal medullary amacrine neuron Dm8a		was mapped to generic Dm8 (FBbt:00013774); refined to Dm8a per all_male-cns_FBbt.tsv
+Dm8b	FBbt:00053639	distal medullary amacrine neuron Dm8b		previous term FBbt:00110069 is obsolete
+R7d	FBbt:00004449	dorsal margin photoreceptor cell R7		was generic R7 (FBbt:00004225)
+R7p	FBbt:02000006	photoreceptor cell R7 of pale ommatidium		was generic R7 (FBbt:00004225)
+R7y	FBbt:02000005	photoreceptor cell R7 of yellow ommatidium		was generic R7 (FBbt:00004225)
+R8d	FBbt:00004209	dorsal margin photoreceptor cell R8		was generic R8 (FBbt:00004227)
+R8p	FBbt:02000004	photoreceptor cell R8 of pale ommatidium		was generic R8 (FBbt:00004227)
+R8y	FBbt:02000003	photoreceptor cell R8 of yellow ommatidium		was generic R8 (FBbt:00004227)
+CB0339	FBbt:00049369	adult lateral horn PD2a2 neuron		corrected from PD2b1 (FBbt:00049371) per all_male-cns_FBbt.tsv
