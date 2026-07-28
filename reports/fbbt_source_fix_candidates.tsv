@@ -1,0 +1,4 @@
+cell_type	flywire_key(flywireType)	flywire_line	current_term	better_FBbt	better_term	corroborated_by	verdict
+VM4_lvPN	VC5_lvPN	8503	FBbt:00049655 adult antennal lobe projection neuron VC5 lvPN	FBbt:00049775	adult antennal lobe projection neuron VM4 lvPN	neuron_symbols	REVIEW: flywireType looks mis-annotated (VM4 cell tagged VC5_lvPN)
+AN10B005	AN_multi_17	489	FBbt:20001290 adult inferior bridge neuron 113	FBbt:20007953	adult AN10B005 neuron	manc + neuron_symbols	REVIEW: eponymous ID term (marginal vs IB113 placeholder)
+AN27X008	MsAHN	6769	FBbt:00052358 adult mesothoracic histaminergic neuron	FBbt:20008093	adult AN27X008 neuron	manc + neuron_symbols	"REVIEW: current ""mesothoracic histaminergic neuron"" may be preferable"

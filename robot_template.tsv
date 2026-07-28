@@ -34,7 +34,6 @@ GO:0040011	owl:Class
 GO:0040040	owl:Class			
 GO:0042048	owl:Class			
 GO:0042331	owl:Class			
-GO:0043057	owl:Class			
 GO:0045433	owl:Class			
 GO:0046541	owl:Class			
 GO:0050909	owl:Class			
@@ -48,25 +47,19 @@ FBbt:00049823		GO:0007601	PMID:34913436|doi:10.1038/s41586-026-10735-w
 FBbt:00053485		GO:0007623	PMID:39638801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053488		GO:0007623	PMID:39638801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053491		GO:0007623	PMID:39638801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:20007772		GO:0007619	PMID:26568316	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111517		GO:0019236	PMID:26568316	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20007772		GO:0019236	PMID:26568316|doi:10.1038/s41586-026-10735-w	
 FBbt:00059240		GO:0007628	PMID:35525243|PMID:31969834|doi:10.1038/s41586-026-10735-w	
 FBbt:20007836		GO:0007625	PMID:36959417	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20007874		GO:0001964	PMID:36959417	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00053053		GO:0007619	doi:10.1016/j.cub.2024.01.015|doi:10.1038/s41586-026-10735-w	
-FBbt:00053053		GO:0007619	doi:10.1016/j.cub.2024.01.015|doi:10.1038/s41586-026-10735-w	
-FBbt:00053053		GO:0007619	doi:10.1016/j.cub.2024.01.015|doi:10.1038/s41586-026-10735-w	
-FBbt:00053053		GO:0007619	doi:10.1016/j.cub.2024.01.015|doi:10.1038/s41586-026-10735-w	
 FBbt:00052713		GO:0019236	PMID:26279475|doi:10.1038/s41586-026-10735-w	
-FBbt:20001290		GO:0030431	PMID:36959417|doi:10.1038/s41586-026-10735-w	
+FBbt:20007953		GO:0030431	PMID:36959417|doi:10.1038/s41586-026-10735-w	
 FBbt:20008046		GO:0007628	PMID:39358520|doi:10.1038/s41586-026-10735-w	
 FBbt:00052359		GO:0007629	doi:10.7554/elife.96084.1|doi:10.1038/s41586-026-10735-w	
 FBbt:00052358		GO:0007629	doi:10.7554/elife.96084.1|doi:10.1038/s41586-026-10735-w	
 FBbt:20000018		GO:0007632	PMID:40599160	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20000018		GO:0007628	PMID:40599160	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20000024		GO:0007632	PMID:40599160	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00051200		GO:0007619	PMID:30661796	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20003898		GO:0007631	PMID:40909552	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049369		GO:0007613	PMID:30244885	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049369		GO:0042048	PMID:30244885	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -86,7 +79,6 @@ FBbt:00049371		GO:0042048	PMID:30244885	From known types spreadsheet - https://d
 FBbt:00049368		GO:0007613	PMID:30244885	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049368		GO:0042048	PMID:30244885	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053575		GO:0007631	PMID:40230598|PMID:39282336	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048028		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053577		GO:0006936	PMID:37217726	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053577		GO:0018991	PMID:37217726	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053212		GO:0040011	PMID:38509371|doi:10.1038/s41586-024-07222-5	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -142,22 +134,20 @@ FBbt:00052272		GO:0007623	PMID:26276633|PMID:21195773	From known types spreadshe
 FBbt:00047572		GO:0008344	doi:10.7554/elife.102230.1|doi:10.1038/s41586-026-10735-w	
 FBbt:00047573		GO:0008344	doi:10.7554/elife.102230.1|doi:10.1038/s41586-026-10735-w	
 FBbt:00047574		GO:0008344	doi:10.1101/2024.06.27.601106|doi:10.1038/s41586-026-10735-w	
-FBbt:20008279		GO:0007629	doi:10.1016/j.cub.2023.12.063|doi:10.1038/s41586-026-10735-w	
-FBbt:20008259		GO:0007629	PMID:37333334|doi:10.1038/s41586-026-10735-w	
+FBbt:00047575		GO:0007629	doi:10.1016/j.cub.2023.12.063|doi:10.1038/s41586-026-10735-w	
+FBbt:00047576		GO:0007629	PMID:37333334|doi:10.1038/s41586-026-10735-w	
 FBbt:00047581		GO:0007629	doi:10.1101/2023.06.07.543976	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20003474		GO:0008344	doi:10.1101/2024.06.27.601106|doi:10.1038/s41586-026-10735-w	
 FBbt:00051200		GO:0040011	doi:10.1016/j.cub.2018.12.019|doi:10.1038/s41586-026-10735-w	
 FBbt:20011334		GO:0007629	PMID:38228148|doi:10.1038/s41586-026-10735-w	
 FBbt:20001795		GO:0008344	doi:10.1101/2024.06.27.601106|doi:10.1038/s41586-026-10735-w	
-FBbt:00053057		GO:0007629	PMID:38228148|doi:10.1038/s41586-026-10735-w	
+FBbt:00047582		GO:0007629	PMID:38228148|doi:10.1038/s41586-026-10735-w	
 FBbt:00047583		GO:0008344	PMID:38839968|doi:10.1038/s41586-026-10735-w	
 FBbt:00047586		GO:0008344	PMID:39293446|doi:10.1038/s41586-026-10735-w	
-FBbt:20008249		GO:0008344	PMID:39293446|doi:10.1038/s41586-026-10735-w	
+FBbt:00047587		GO:0008344	PMID:39293446|doi:10.1038/s41586-026-10735-w	
 FBbt:20011340		GO:0007628	PMID:42094485|doi:10.1038/s41586-026-10735-w	
-FBbt:00047594		GO:0007629	PMID:35090590|doi:10.1038/s41586-026-10735-w	
 FBbt:20007473		GO:0007628	PMID:39358520|PMID:42094485|doi:10.1038/s41586-026-10735-w	
 FBbt:00047603		GO:0007625	PMID:36558488|PMID:35120659	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00047604		GO:0007625	doi:10.1016/j.cub.2021.12.055|PMID:42094485|doi:10.1038/s41586-026-10735-w	
 FBbt:00047605		GO:0008344	PMID:39293446|doi:10.1038/s41586-026-10735-w	
 FBbt:00047606		GO:0040011	PMID:38839968|doi:10.1038/s41586-026-10735-w	
 FBbt:00047609		GO:0007629	PMID:35090590	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -179,7 +169,7 @@ FBbt:00047636		GO:0007629	doi:10.1016/j.cub.2024.12.001|doi:10.1038/s41586-026-1
 FBbt:00047637		GO:0007629	PMID:36599984|doi:10.1038/s41586-026-10735-w	
 FBbt:00047639		GO:0007629	doi:10.1016/j.cub.2022.12.014|doi:10.1038/s41586-026-10735-w	
 FBbt:00047640		GO:0007629	PMID:31182867|doi:10.1038/s41586-026-10735-w	
-FBbt:20011344		GO:0007628	PMID:32822613|PMID:30209268|PMID:38839968|doi:10.1038/s41586-026-10735-w	
+FBbt:00047642		GO:0007628	PMID:32822613|PMID:30209268|PMID:38839968|doi:10.1038/s41586-026-10735-w	
 FBbt:00047643		GO:0007629	PMID:31182867|doi:10.1038/s41586-026-10735-w	
 FBbt:00047644		GO:0007629	PMID:36599984|doi:10.1038/s41586-026-10735-w	
 FBbt:00047646		GO:0000003	doi:10.1016/j.cub.2024.01.015|PMID:32103180|doi:10.1038/s41586-026-10735-w	
@@ -192,10 +182,7 @@ FBbt:00051433		GO:0007631	PMID:22969751|doi:10.1038/s41586-026-10735-w
 FBbt:00048405		GO:0000003	doi:10.1038/s41586-020-2972-7|doi:10.1038/s41586-026-10735-w	
 FBbt:00052181		GO:0007628	PMID:38839968|doi:10.1101/394403|doi:10.1038/s41586-026-10735-w	
 FBbt:00049697		GO:0040040	PMID:32619476	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00111308		GO:0043057	PMID:24700860	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00051434		GO:0007631	PMID:22969751|doi:10.1038/s41586-026-10735-w	
-FBbt:00048028		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048028		GO:0007631	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00007475		GO:0042048	PMID:21085119|PMID:41278801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049769		GO:0042048	PMID:21085119|PMID:41278801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00067021		GO:0042048	PMID:21085119|PMID:41278801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -258,26 +245,13 @@ FBbt:20001390		GO:0042048	PMID:40244663	From known types spreadsheet - https://d
 FBbt:20001389		GO:0035178	PMID:40244663	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20001389		GO:0007628	PMID:40244663	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20001389		GO:0042048	PMID:40244663	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00051978		GO:0050909	PMID:39358519|PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00051978		GO:0050913	PMID:39358519|PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00049613		GO:0050909	PMID:39358519|PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00049613		GO:0050913	PMID:39358519|PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00110887		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00110887		GO:0050913	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00051978		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00051978		GO:0050913	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00110887		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00005927		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00005927		GO:0008306	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00005927		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00005927		GO:0050916	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00005927		GO:0050916	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00005927		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111747		GO:0007632	doi:10.1016/j.cell.2018.06.020|PMID:34234348|PMID:28029094|doi:10.1038/s41586-026-10735-w	
 FBbt:00111745		GO:0007632	doi:10.1016/j.cell.2018.06.020|PMID:28029094|doi:10.1038/s41586-026-10735-w	
 FBbt:00111746		GO:0007632	doi:10.1016/j.cell.2018.06.020|PMID:28029094|doi:10.1038/s41586-026-10735-w	
 FBbt:00111748		GO:0007632	doi:10.1016/j.cell.2018.06.020|PMID:28029094|doi:10.1038/s41586-026-10735-w	
-FBbt:00100482		GO:0007632	PMID:30033367	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00100483		GO:0007632	PMID:27426516|PMID:28190726|PMID:32442466|doi:10.1016/j.cub.2022.12.014|doi:10.1016/j.neuron.2022.02.013|PMID:28029094|PMID:36300621|doi:10.1038/s41586-026-10735-w	
 FBbt:00100484		NBO:0000551	doi:10.1016/j.neuron.2022.02.013|PMID:28029094|PMID:36300621|doi:10.1038/s41586-026-10735-w	
 FBbt:00100484		GO:0007632	doi:10.1016/j.neuron.2022.02.013|PMID:28029094|PMID:36300621|doi:10.1038/s41586-026-10735-w	
@@ -307,7 +281,7 @@ FBbt:00049329		GO:0042048	PMID:31112130	From known types spreadsheet - https://d
 FBbt:00049329		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049329		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049331		GO:0042048	PMID:31112130|doi:10.1101/394403	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:20004683		GO:0019236	PMID:37236194	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
+FBbt:00049338		GO:0019236	PMID:37236194	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00051548		GO:0042048	PMID:41278801	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049368		GO:0007613	PMID:30244885	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049368		GO:0042048	PMID:30244885	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -323,7 +297,7 @@ FBbt:00049387		GO:0042048	PMID:31112130	From known types spreadsheet - https://d
 FBbt:00049387		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049387		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049387		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:20006234		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
+FBbt:00049388		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049388		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049388		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049407		GO:0042048	PMID:31112130	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -383,11 +357,6 @@ FBbt:00111308		GO:0007628	doi:10.1126/science.1249964|doi:10.1038/s41586-026-107
 FBbt:00052147		GO:0007601	PMID:33755020|doi:10.1038/s41586-026-10735-w	
 FBbt:00052752		GO:0007629	PMID:37398009	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00053508		GO:0007632	PMID:39358517|doi:10.1038/s41586-026-10735-w	
-FBbt:00052133		GO:0007601	PMID:39358517|PMID:33755020|PMID:34913436|doi:10.1038/s41586-026-10735-w	
-FBbt:00052133		GO:0007601	PMID:39358517|PMID:33755020|PMID:34913436|doi:10.1038/s41586-026-10735-w	
-FBbt:00053509		GO:0007601	PMID:39358517|doi:10.1038/s41586-026-10735-w	
-FBbt:00053509		GO:0007601	PMID:39358517|doi:10.1038/s41586-026-10735-w	
-FBbt:00053509		GO:0007601	PMID:39358517|doi:10.1038/s41586-026-10735-w	
 FBbt:00003776		GO:0007601	PMID:29255026	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00003777		GO:0007601	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111284		GO:0007601	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -397,7 +366,6 @@ FBbt:20004445		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552
 FBbt:20004500		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004558		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004494		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:20004571		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004431		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004545		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004567		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -406,7 +374,6 @@ FBbt:20004478		GO:0007631	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552
 FBbt:00051190		GO:0007631	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111298		GO:0007637	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004429		GO:0007631	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:20004607		GO:0007631	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20004539		GO:0046541	PMID:7860793|PMID:19217375|PMID:28211791|PMID:40909552|PMID:32584254|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20007659		GO:0007601	PMID:34913436|doi:10.1038/s41586-026-10735-w	
 FBbt:00053412		GO:0007601	doi:10.7554/elife.93659.1|doi:10.1038/s41586-026-10735-w	
@@ -491,24 +458,6 @@ FBbt:00049803		GO:0007626	PMID:28538731|PMID:28530551	From known types spreadshe
 FBbt:00049804		GO:0007626	PMID:28538731|PMID:28530551	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111451		GO:0035178	PMID:38326621	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111443		GO:0007626	PMID:38326612	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0007637	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00110886		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00110854		GO:0045433	PMID:21315261	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111170		GO:0007619	PMID:38295797	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00100243		GO:0042048	PMID:19837040|PMID:23227489|PMID:23103875	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -525,13 +474,6 @@ FBbt:02000006		GO:0009589	PMID:33618155	From known types spreadsheet - https://d
 FBbt:00004209		GO:0009589	PMID:22177904|PMID:27170135	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20002243		GO:0007625	PMID:36558488|PMID:35120659	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111645		GO:0007625	PMID:39358519|PMID:26344548	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048279		GO:0040011	PMID:31607538	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20002954		GO:0007628	PMID:40244663	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:20003412		GO:0000003	PMID:32103180	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00003728		GO:0007632	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -561,11 +503,6 @@ FBbt:00052859		GO:0007632	PMID:40460825	From known types spreadsheet - https://d
 FBbt:00049515		GO:0007601	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00003823		GO:0007632	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00003823		GO:0007601	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00003827		GO:0007632	PMID:40460825|PMID:39358524|doi:10.1101/2025.03.06.641774	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00003827		GO:0007601	PMID:40460825|PMID:39358524|doi:10.1101/2025.03.06.641774	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00003827		GO:0007632	PMID:39358524	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00003827		GO:0007632	PMID:39358524	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00003827		GO:0007632	PMID:39358524	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049660		GO:0040040	PMID:27161501|PMID:28971561|PMID:32619476|PMID:28736172|doi:10.7554/eLife.97766	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00007575		GO:0016048	PMID:28971561|PMID:32619476|PMID:28736172|doi:10.7554/eLife.97766	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00051491		GO:0007601	PMID:33755020	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
@@ -596,18 +533,12 @@ FBbt:00053051		GO:0007619	doi:10.1016/j.cub.2024.01.015|doi:10.1038/s41586-026-1
 FBbt:00049741		GO:0040040	PMID:37923719	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049741		GO:0016048	PMID:37923719	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00048093		GO:0016048	PMID:28971561|PMID:28736172	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00049910		GO:0016048	PMID:32442464	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00111337		GO:0016048	PMID:32442464	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00049752		GO:0098509	PMID:28971561|PMID:28736172	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00052714		GO:0040011	PMID:21315261	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00052714		GO:0007619	PMID:21315261	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00048129		GO:0007601	doi:10.7554/elife.93659.1|doi:10.1038/s41586-026-10735-w	
 FBbt:00048130		GO:0007601	doi:10.7554/elife.93659.1|doi:10.1038/s41586-026-10735-w	
-FBbt:00048271		GO:0007619	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048271		GO:0050916	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048271		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048270		GO:0019236	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
-FBbt:00048271		GO:0050909	PMID:40909552|doi:10.1101/2025.08.25.671814	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00003912		GO:0007632	PMID:40460825	From known types spreadsheet - https://docs.google.com/spreadsheets/d/1VHCEnurOdb4FDC_NUKZX_BpBckQ9LpKxv0CsK_ObVok/edit
 FBbt:00047638		GO:0007629	PMID:37333334|doi:10.1038/s41586-026-10735-w	
 FBbt:00047599		GO:0007629	PMID:35090590|doi:10.1038/s41586-026-10735-w	
@@ -616,7 +547,7 @@ FBbt:00047650		GO:0008344	doi:10.1101/2025.07.22.666129|doi:10.1038/s41586-026-1
 FBbt:00100485		GO:0007632	doi:10.1016/j.cub.2022.12.014|PMID:28029094|doi:10.1038/s41586-026-10735-w	
 FBbt:20008099		GO:0007628	PMID:36862736|doi:10.1038/s41586-026-10735-w	
 FBbt:00049915		GO:0007628	doi:10.1016/j.cub.2017.02.008|doi:10.1016/j.cub.2019.11.004|doi:10.1038/s41586-026-10735-w	
-FBbt:20002048		GO:0007629	doi:10.1016/j.cub.2022.12.005|doi:10.1101/2025.12.13.693955|doi:10.1038/s41586-026-10735-w	
+FBbt:20011348		GO:0007629	doi:10.1016/j.cub.2022.12.005|doi:10.1101/2025.12.13.693955|doi:10.1038/s41586-026-10735-w	
 FBbt:20007517		GO:0007629	doi:10.1016/j.cub.2022.12.005|doi:10.1101/2025.12.13.693955|doi:10.1038/s41586-026-10735-w	
 FBbt:20011354		GO:0002209	PMID:41279188|doi:10.1038/s41586-026-10735-w	
 FBbt:20001046		GO:0002209	PMID:41279188|doi:10.1038/s41586-026-10735-w	

@@ -65,11 +65,18 @@ def _split(value):
 
 
 def build_fbbt_index():
-    """value -> (FBbt_id, FBbt_name, specificity), unambiguous matches only."""
+    """Return (type_index, general_index), each value -> (FBbt_id, FBbt_name,
+    specificity) for unambiguous matches only.
+
+    ``type_index`` is built from the authoritative ``type`` column alone;
+    ``general_index`` also uses synonyms and the hemibrain/flywire/manc type
+    columns. The type index is consulted first at lookup time, so a name that
+    is some other cell type's cross-referenced hemibrain/flywire ID cannot
+    shadow the row whose primary ``type`` is that name (e.g. DNp71 lists DNp09
+    as its hemibrainType; DNp09 must still resolve to the DNp09 term)."""
     if not FBBT_TABLE.exists() and not _fetch_fbbt_table():
-        return {}
-    # value -> {fbbt_id: (fbbt_name, specificity)}
-    candidates = {}
+        return {}, {}
+    type_cand, gen_cand = {}, {}
     with open(FBBT_TABLE, newline='', encoding='utf-8') as f:
         for row in csv.DictReader(f, delimiter='\t'):
             fid = (row.get('FBbt_id') or '').strip()
@@ -80,15 +87,20 @@ def build_fbbt_index():
                 continue
             info = (fid, (row.get('FBbt_name') or '').strip(),
                     (row.get('specificity') or '').strip())
+            for val in _split(row.get('type')):
+                type_cand.setdefault(val, {})[fid] = info
             for col in MATCH_COLS:
                 for val in _split(row.get(col)):
-                    candidates.setdefault(val, {})[fid] = info
-    # Keep only values that map to exactly one FBbt term.
-    index = {v: next(iter(d.values())) for v, d in candidates.items() if len(d) == 1}
-    ambiguous = sum(1 for d in candidates.values() if len(d) > 1)
-    print(f"  male-cns FBbt index: {len(index)} unambiguous names "
-          f"({ambiguous} names skipped as ambiguous)", file=sys.stderr)
-    return index
+                    gen_cand.setdefault(val, {})[fid] = info
+
+    def unambiguous(cand):
+        return {v: next(iter(d.values())) for v, d in cand.items() if len(d) == 1}
+    type_index, gen_index = unambiguous(type_cand), unambiguous(gen_cand)
+    ambiguous = sum(1 for d in gen_cand.values() if len(d) > 1)
+    print(f"  male-cns FBbt index: {len(gen_index)} unambiguous names "
+          f"({len(type_index)} via authoritative type column; "
+          f"{ambiguous} names skipped as ambiguous)", file=sys.stderr)
+    return type_index, gen_index
 
 
 def ols_lookup(name):
@@ -119,19 +131,32 @@ def main():
         f.seek(0)
         rows = list(csv.DictReader(f, delimiter='\t'))
 
-    # Re-attempt rows that are unmapped OR carry an invalid (e.g. compound)
-    # FBbt_id, so bad values that were carried over get cleaned up.
-    blanks = [r for r in rows if not FBBT_CURIE.fullmatch((r.get('FBbt_id') or '').strip())]
-    print(f"{len(blanks)}/{len(rows)} rows need an FBbt mapping; re-attempting.",
-          file=sys.stderr)
-
-    index = build_fbbt_index()
-    filled_file = filled_ols = 0
+    type_index, gen_index = build_fbbt_index()
+    n_source = n_carry = n_gen = n_ols = 0
     still_unmapped = []
 
-    for row in blanks:
-        names = [row['cell_type'].strip()] + _split(row.get('also_known_as'))
-        hit = next((index[n] for n in names if n in index), None)
+    for row in rows:
+        ct = row['cell_type'].strip()
+        names = [ct] + _split(row.get('also_known_as'))
+        cur = (row.get('FBbt_id') or '').strip()
+
+        # 1. The male-cns table is authoritative: an unambiguous match on its
+        #    'type' column wins over any carried-over / previously-curated
+        #    value, so fixes made at source propagate. (Deliberate exceptions
+        #    are pinned in fbbt_overrides.tsv, applied last.)
+        if ct in type_index:
+            row['FBbt_id'], row['FBbt_name'], row['specificity'] = type_index[ct]
+            n_source += 1
+            continue
+
+        # 2. No authoritative source match: keep a valid carried-over mapping
+        #    (e.g. an OLS/manual mapping not present in the male-cns table).
+        if FBBT_CURIE.fullmatch(cur):
+            n_carry += 1
+            continue
+
+        # 3. Still unmapped/invalid: try secondary columns, then OLS.
+        hit = next((gen_index[n] for n in names if n in gen_index), None)
         source = 'male-cns'
         if not hit:
             for n in names:
@@ -143,13 +168,17 @@ def main():
         if hit:
             row['FBbt_id'], row['FBbt_name'], row['specificity'] = hit
             if source == 'male-cns':
-                filled_file += 1
+                n_gen += 1
             else:
-                filled_ols += 1
+                n_ols += 1
         else:
             # Clear any invalid carried-over value so it can't reach the OWL.
             row['FBbt_id'] = row['FBbt_name'] = row['specificity'] = ''
-            still_unmapped.append(row['cell_type'])
+            still_unmapped.append(ct)
+
+    print(f"FBbt mapping: {n_source} from male-cns type column (authoritative), "
+          f"{n_carry} kept from prior curation, {n_gen} via secondary columns, "
+          f"{n_ols} via OLS.", file=sys.stderr)
 
     # Force curated overrides last, so they win over both the carried-over
     # value and the male-cns table.
@@ -173,8 +202,7 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
 
-    print(f"\nFilled {filled_file} from male-cns table, {filled_ols} from OLS.")
-    print(f"Applied {applied} curated override(s) from {OVERRIDES.name}.")
+    print(f"\nApplied {applied} curated override(s) from {OVERRIDES.name}.")
     print(f"Still unmapped ({len(still_unmapped)}): {', '.join(still_unmapped)}")
 
 

@@ -8,3 +8,10 @@ R8d	FBbt:00004209	dorsal margin photoreceptor cell R8		was generic R8 (FBbt:0000
 R8p	FBbt:02000004	photoreceptor cell R8 of pale ommatidium		was generic R8 (FBbt:00004227)
 R8y	FBbt:02000003	photoreceptor cell R8 of yellow ommatidium		was generic R8 (FBbt:00004227)
 CB0339	FBbt:00049369	adult lateral horn PD2a2 neuron		corrected from PD2b1 (FBbt:00049371) per all_male-cns_FBbt.tsv
+DNp09	FBbt:00047642	descending neuron of the posterior brain DNp09		corrected from DNp71 (FBbt:20011344); DNp71 lists DNp09 as its hemibrainType, causing a name-match error in the original curation
+DNa04	FBbt:00047575	descending neuron of the anterior dorsal brain DNa04		corrected from DNut060 (FBbt:20008279) per male-cns 'type' column
+DNa05	FBbt:00047576	descending neuron of the anterior dorsal brain DNa05		corrected from DNut037 (FBbt:20008259) per male-cns 'type' column
+DNb01	FBbt:00047582	descending neuron of the anterior ventral brain DNb01		corrected from DNb09 (FBbt:00053057) per male-cns 'type' column
+DNb06	FBbt:00047587	descending neuron of the anterior ventral brain DNb06		corrected from DNnt015 (FBbt:20008249) per male-cns 'type' column
+aSP22	FBbt:00051200	descending neuron of the anterior dorsal brain DNa12		pin sex-neutral DNa12; male-cns 'type' gives the male term FBbt:00051201
+AN27X008	FBbt:00052358	adult mesothoracic histaminergic neuron		pin the named functional term; male-cns 'type' gives the ID term FBbt:20008093

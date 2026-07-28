@@ -21,6 +21,10 @@ scripts/
   resolve_references.py           stage 3: resolve references -> xrefs
   map_functions.py                stage 4: map functions -> GO/NBO
   generate_robot_template.py      stage 5: build the ROBOT template
+build.sh                        runs the full pipeline + stamps OWL metadata
+reports/                        analysis artifacts (not read by the pipeline)
+  ontology-change-report.md       cell-type/function changes from the BANC merge
+  fbbt_source_fix_candidates.tsv  upstream FBbt mappings still worth fixing at source
 neuron_functions.tsv            merged, enriched working file (basis for the OWL)
 robot_template.tsv              generated ROBOT template
 vfb-neuron-functions.owl        generated OWL ontology
@@ -63,7 +67,14 @@ file regardless of where each row came from.
 
 ## Pipeline
 
-Run from the repository root, in order:
+The whole build is wrapped in **`build.sh`** — run it from the repository root:
+
+```bash
+./build.sh
+```
+
+It runs the five stages in order and then builds the OWL with ROBOT, stamping
+version and provenance metadata (see below). It is equivalent to:
 
 ```bash
 python scripts/merge_sources.py            # sources/ -> neuron_functions.tsv
@@ -71,19 +82,24 @@ python scripts/map_fbbt.py                 # add FBbt_id / FBbt_name / specifici
 python scripts/resolve_references.py       # add xrefs
 python scripts/map_functions.py            # add function_ont_id / function_ont_label
 python scripts/generate_robot_template.py  # -> robot_template.tsv
-robot template --template robot_template.tsv \
-  --prefix "FBbt: http://purl.obolibrary.org/obo/FBbt_" \
-  --prefix "GO: http://purl.obolibrary.org/obo/GO_" \
-  --prefix "NBO: http://purl.obolibrary.org/obo/NBO_" \
-  --prefix "RO: http://purl.obolibrary.org/obo/RO_" \
-  --prefix "oboInOwl: http://www.geneontology.org/formats/oboInOwl#" \
-  annotate --ontology-iri "http://virtualflybrain.org/data/VFB/OWL/vfb-neuron-functions.owl" \
+robot template --template robot_template.tsv <prefixes...> annotate <metadata...> \
   --output vfb-neuron-functions.owl
 ```
 
 `merge_sources.py`, `resolve_references.py`, `map_functions.py` and `map_fbbt.py`
 each rebuild their own output columns on every run, so the pipeline is
 re-runnable; `neuron_functions.tsv` accumulates the results.
+
+### Ontology metadata / versioning
+
+`build.sh` stamps the OWL's `owl:Ontology` node with a **date-based version**
+(`owl:versionInfo`, a dated `owl:versionIRI` under `.../releases/<date>/`, and
+`dcterms:modified`), a `dcterms:description`, `dc:creator` "Virtual Fly Brain", a
+`dcterms:license` of [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and
+provenance: `dcterms:source` = the BANC paper DOI, plus an `rdfs:comment` recording
+the build date and the exact git commits of this repo and of `male-cns_curation`
+(the FBbt-mapping source) — so the "data version" is pinned to source revisions, not
+just a date. The date and commits are computed at build time.
 
 ## Stage 1 — Merge (`merge_sources.py`)
 
@@ -102,7 +118,9 @@ the [male-cns_curation](https://github.com/VirtualFlyBrain/male-cns_curation) pr
 re-attempts **every** row that lacks a valid FBbt mapping on each run (so cell types
 gain mappings as new FBbt terms are published), matching cell-type names and aliases
 against the male-cns table (single, clean FBbt CURIEs only) and falling back to a
-conservative OLS search. Already-mapped rows are left untouched, except that
+conservative OLS search. Matching prefers the table's authoritative `type` column
+over secondary columns (synonyms, hemibrain/flywire/manc types), so a name that is
+another cell type's cross-referenced ID cannot shadow the correct term. Already-mapped rows are left untouched, except that
 curated entries in `resources/fbbt_overrides.tsv` are force-applied last (they win
 over both the carried-over value and the male-cns table). Use the overrides file for
 deliberate curation decisions — e.g. fixing an obsoleted term, refining a generic
@@ -154,14 +172,18 @@ male-specific GO terms only on male-specific FBbt anatomy).
 
 ## Stage 5 — OWL generation (`generate_robot_template.py` + ROBOT)
 
-`generate_robot_template.py` filters to the **465 rows** where FBbt_id,
-function_ont_id and xrefs are all present, expands pipe-separated functions into one
-row per (FBbt, function) pair (validating that both are clean CURIEs), and writes
-`robot_template.tsv` (578 data rows). ROBOT builds the OWL, asserting for each row
+`generate_robot_template.py` filters to the **412 rows** where FBbt_id,
+function_ont_id and xrefs are all present **and the FBbt mapping is an exact match**
+— rows whose `specificity` is `parent_term` or `general_term` are excluded, so a
+function is never asserted on a broad anatomy class (and distinct subtypes are not
+collapsed onto a shared parent). It expands pipe-separated functions into one row per
+(FBbt, function) pair (validating that both are clean CURIEs), and writes
+`robot_template.tsv` (509 data rows). ROBOT builds the OWL, asserting for each row
 `FBbt:X SubClassOf RO:0002216 ('capable of part of') some GO:Y`, annotated with the
-literature references (`oboInOwl:hasDbXref`) and a provenance `rdfs:comment`.
+literature references (`oboInOwl:hasDbXref`) and a provenance `rdfs:comment` (the
+comment is only added for `known_types`-sourced rows).
 
-- **499 `capable of part of` axioms**; 131 carry the BANC paper DOI.
+- **467 `capable of part of` axioms**; 126 carry the BANC paper DOI.
 
 ## Files
 
@@ -176,5 +198,6 @@ literature references (`oboInOwl:hasDbXref`) and a provenance `rdfs:comment`.
 | `scripts/resolve_references.py` | Resolve references to PubMed IDs and DOIs |
 | `scripts/map_functions.py` | Map functions to GO/NBO ontology terms |
 | `scripts/generate_robot_template.py` | Generate the ROBOT template |
+| `build.sh` | Run the full pipeline and build the OWL with version/provenance metadata |
 | `robot_template.tsv` | Generated ROBOT template |
 | `vfb-neuron-functions.owl` | Generated OWL ontology with neuron-function axioms |
