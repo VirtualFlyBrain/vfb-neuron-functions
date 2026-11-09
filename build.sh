@@ -6,9 +6,11 @@
 # function mapping -> ROBOT template -> OWL) and stamps version and
 # provenance metadata into the ontology. The version is date-based; the
 # provenance pins the exact source revisions used (this repo's commit and the
-# male-cns_curation commit that the FBbt anatomy mappings came from).
+# connectome-curation commit that built the FBbt anatomy mappings).
 #
-# Requires: python3, and ROBOT (https://robot.obolibrary.org/) on PATH.
+# Requires: python3, and ROBOT (https://robot.obolibrary.org/) on PATH. To
+# rebuild the FBbt table: a connectome-curation checkout (../connectome-curation,
+# or set CONNECTOME_CURATION), uv, and NEUPRINT_TOKEN.
 # The reference-resolution and function-mapping stages make network calls
 # (NCBI E-utilities and the EBI OLS).
 #
@@ -17,26 +19,22 @@ cd "$(dirname "$0")"
 
 DATE=$(date +%F)
 SELF=$(git rev-parse --short HEAD 2>/dev/null || echo unknown)
-MCNS=$(git -C ../male-cns_curation rev-parse --short HEAD 2>/dev/null || echo unknown)
+CC="${CONNECTOME_CURATION:-../connectome-curation}"
+CCREV=$(git -C "$CC" rev-parse --short HEAD 2>/dev/null || echo unknown)
 VERSION_IRI="http://virtualflybrain.org/data/VFB/OWL/releases/${DATE}/vfb-neuron-functions.owl"
 
-# Sync the FBbt anatomy-mapping table from the (committed) male-cns_curation
-# source, updating the local cache only when it actually differs.
-echo "== 0/5 sync FBbt table from source =="
+# Build the male-CNS FBbt typing table with connectome-curation (from neuPrint
+# and its mapping tables) and copy it here. Neither copy is committed.
+echo "== 0/5 build FBbt table with connectome-curation =="
 FBBT_CACHE="resources/all_male-cns_FBbt.tsv"
-FBBT_REMOTE="repos/VirtualFlyBrain/male-cns_curation/contents/resources/all_male-cns_FBbt.tsv"
-TMP=$(mktemp)
-if gh api "$FBBT_REMOTE" -H "Accept: application/vnd.github.raw" > "$TMP" 2>/dev/null && [ -s "$TMP" ]; then
-  if [ ! -f "$FBBT_CACHE" ] || ! cmp -s "$TMP" "$FBBT_CACHE"; then
-    mkdir -p resources && cp "$TMP" "$FBBT_CACHE"
-    echo "   updated $FBBT_CACHE from source"
-  else
-    echo "   $FBBT_CACHE already up to date"
-  fi
+FBBT_BUILT="$CC/datasets/male_cns/resources/all_male-cns_FBbt.tsv"
+if [ -d "$CC" ] && (cd "$CC" && uv run vfb-curation build-typing male_cns); then
+  mkdir -p resources && cp "$FBBT_BUILT" "$FBBT_CACHE"
+  echo "   $FBBT_CACHE built from connectome-curation@${CCREV}"
 else
-  echo "   WARNING: could not fetch FBbt table; using existing cache" >&2
+  CCREV="${CCREV} (build failed; cached table)"
+  echo "   WARNING: could not build the FBbt table in $CC; using existing cache" >&2
 fi
-rm -f "$TMP"
 
 echo "== 1/5 merge sources =="            ; python3 scripts/merge_sources.py
 echo "== 2/5 FBbt anatomy mapping =="      ; python3 scripts/map_fbbt.py
@@ -56,7 +54,7 @@ robot template --template robot_template.tsv \
     --annotation owl:versionInfo "${DATE}" \
     --annotation http://purl.org/dc/elements/1.1/creator "Virtual Fly Brain" \
     --annotation http://purl.org/dc/terms/description "capable_of_part_of (RO:0002216) relationships between adult Drosophila neuron types (FBbt) and their functions (GO Biological Process / NBO), curated by Virtual Fly Brain from the known-types spreadsheet and the BANC connectome function supplement." \
-    --annotation rdfs:comment "Built ${DATE} from vfb-neuron-functions@${SELF} (sources: known-types spreadsheet + BANC_function_supplement.tsv); FBbt anatomy mappings from male-cns_curation@${MCNS} (all_male-cns_FBbt.tsv)." \
+    --annotation rdfs:comment "Built ${DATE} from vfb-neuron-functions@${SELF} (sources: known-types spreadsheet + BANC_function_supplement.tsv); FBbt anatomy mappings from connectome-curation@${CCREV} (vfb-curation build-typing male_cns)." \
     --link-annotation http://purl.org/dc/terms/source "https://doi.org/10.1038/s41586-026-10735-w" \
     --link-annotation http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/4.0/" \
     --typed-annotation http://purl.org/dc/terms/modified "${DATE}" xsd:date \

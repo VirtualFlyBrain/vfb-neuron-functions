@@ -97,8 +97,8 @@ re-runnable; `neuron_functions.tsv` accumulates the results.
 `dcterms:modified`), a `dcterms:description`, `dc:creator` "Virtual Fly Brain", a
 `dcterms:license` of [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and
 provenance: `dcterms:source` = the BANC paper DOI, plus an `rdfs:comment` recording
-the build date and the exact git commits of this repo and of `male-cns_curation`
-(the FBbt-mapping source) — so the "data version" is pinned to source revisions, not
+the build date and the exact git commits of this repo and of `connectome-curation`
+(which builds the FBbt-mapping table) — so the "data version" is pinned to source revisions, not
 just a date. The date and commits are computed at build time.
 
 ## Stage 1 — Merge (`merge_sources.py`)
@@ -112,8 +112,9 @@ prefixes its `known_function` values (e.g. "PAM01 appetitive_learning" →
 
 ## Stage 2 — FBbt anatomy mapping (`map_fbbt.py`)
 
-FBbt mappings are not produced by the annotation pipeline. The bulk were curated in
-the [male-cns_curation](https://github.com/VirtualFlyBrain/male-cns_curation) project
+FBbt mappings are not produced by the annotation pipeline. The bulk come from the
+male-CNS typing table built by
+[connectome-curation](https://github.com/VirtualFlyBrain/connectome-curation)
 (`resources/all_male-cns_FBbt.tsv`), with some added via OLS lookup. This script
 re-attempts **every** row that lacks a valid FBbt mapping on each run (so cell types
 gain mappings as new FBbt terms are published), matching cell-type names and aliases
@@ -140,9 +141,12 @@ improvements (obsolete-term fixes, subtype refinements) via the overrides file.
   term (e.g. `AN09B018_a`–`d`, `SA_VTV_*`, `LgLG*`, `SApp*`, `DProN*`); these stay
   in `neuron_functions.tsv` with their annotations but are excluded from the OWL.
 
-`resources/all_male-cns_FBbt.tsv` comes from a private VFB repository and is **not
-committed** (it is git-ignored). If it is absent, `map_fbbt.py` tries to fetch it
-with the GitHub CLI (`gh`); otherwise it uses the OLS fallback only.
+`resources/all_male-cns_FBbt.tsv` is **not committed** (it is git-ignored).
+`build.sh` builds it each run with connectome-curation
+(`vfb-curation build-typing male_cns`, from neuPrint), which needs a checkout at
+`../connectome-curation` (or `CONNECTOME_CURATION`), `uv` and `NEUPRINT_TOKEN`. If
+the build fails, the existing copy is used; if there is none, `map_fbbt.py` uses the
+OLS fallback only.
 
 ## Stage 3 — Reference resolution (`resolve_references.py`)
 

@@ -2,8 +2,8 @@
 """Fill in FBbt anatomy mappings for neuron_functions.tsv.
 
 FBbt mappings are not produced by the annotation pipeline; the bulk of them
-were curated in the VirtualFlyBrain male-cns_curation project (the file
-``resources/all_male-cns_FBbt.tsv``) with some added by OLS lookup.
+come from the male-CNS typing table built by VirtualFlyBrain/connectome-curation
+(``resources/all_male-cns_FBbt.tsv``), with some added by OLS lookup.
 
 This script re-attempts EVERY row that still has an empty ``FBbt_id`` on each
 run, so that cell types gain mappings as new FBbt terms become available. Rows
@@ -11,15 +11,14 @@ that are already mapped are left untouched. It looks each cell type up (by its
 name and any aliases) in the male-cns FBbt table first, then falls back to a
 conservative OLS search, and reports whatever is still unmapped.
 
-The male-cns table lives in the private VirtualFlyBrain/male-cns_curation repo.
-If ``resources/all_male-cns_FBbt.tsv`` is absent, the script tries to fetch it
-with the GitHub CLI (`gh`); failing that it proceeds with the OLS fallback only.
+``build.sh`` builds the table with connectome-curation
+(``vfb-curation build-typing male_cns``); it is not committed. If it is absent,
+the script proceeds with the OLS fallback only.
 """
 
 import csv
 import json
 import re
-import subprocess
 import sys
 import time
 import urllib.parse
@@ -33,31 +32,12 @@ FBBT_TABLE = ROOT / 'resources' / 'all_male-cns_FBbt.tsv'
 # male-cns table (e.g. obsolete-term fixes, subtype refinements, corrections).
 OVERRIDES = ROOT / 'resources' / 'fbbt_overrides.tsv'
 
-FBBT_REPO = 'VirtualFlyBrain/male-cns_curation'
-FBBT_PATH = 'resources/all_male-cns_FBbt.tsv'
-
 # A clean, single FBbt CURIE (what a class IRI must be built from).
 FBBT_CURIE = re.compile(r'FBbt:\d+')
 
 # Columns in all_male-cns_FBbt.tsv whose values name a cell type.
 MATCH_COLS = ['type', 'synonyms', 'hemibrainType', 'flywireType', 'mancType']
 USE_OLS = True
-
-
-def _fetch_fbbt_table():
-    """Try to download the male-cns FBbt table via the GitHub CLI."""
-    FBBT_TABLE.parent.mkdir(exist_ok=True)
-    try:
-        out = subprocess.run(
-            ['gh', 'api', f'repos/{FBBT_REPO}/contents/{FBBT_PATH}',
-             '-H', 'Accept: application/vnd.github.raw'],
-            capture_output=True, check=True)
-        FBBT_TABLE.write_bytes(out.stdout)
-        print(f"  fetched {FBBT_PATH} via gh", file=sys.stderr)
-        return True
-    except Exception as e:  # noqa: BLE001 - best effort
-        print(f"  could not fetch FBbt table ({e}); OLS fallback only", file=sys.stderr)
-        return False
 
 
 def _split(value):
@@ -74,7 +54,9 @@ def build_fbbt_index():
     is some other cell type's cross-referenced hemibrain/flywire ID cannot
     shadow the row whose primary ``type`` is that name (e.g. DNp71 lists DNp09
     as its hemibrainType; DNp09 must still resolve to the DNp09 term)."""
-    if not FBBT_TABLE.exists() and not _fetch_fbbt_table():
+    if not FBBT_TABLE.exists():
+        print(f"  {FBBT_TABLE.name} not found (run build.sh to build it); "
+              "OLS fallback only", file=sys.stderr)
         return {}, {}
     type_cand, gen_cand = {}, {}
     with open(FBBT_TABLE, newline='', encoding='utf-8') as f:
